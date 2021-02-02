@@ -2,10 +2,15 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>0.0.3</PackageVersion>
+        <Title>LibrsModels</Title>
+        <Authors>Technology Engineers, Inc.</Authors>
+        <Description>Contains C# Objects for LIBRS State Reporting. </Description>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.1-beta1" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>
 
 </Project>

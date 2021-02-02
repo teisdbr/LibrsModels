@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f147b0a-0aa1-40eb-bd85-3428c35dc00f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Admin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/ArrMod.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/ArrStatute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Arrestee.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/AssociatedOffenses.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/AssociatedProperty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/FbiValidate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/OffUsing.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Offender.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Offense.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/PropDesc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/PropMod.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/PropertyOffense.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/PropertySeg.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/RelatedOffenses.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/RelatedProperty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToOffenses.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToProperty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/ValidateLars.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/VicInjury.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/VicOff.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Victim.cs" afterDir="false" />
+    <list default="true" id="6f147b0a-0aa1-40eb-bd85-3428c35dc00f" name="Default Changelist" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +44,7 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToOffenses.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToProperty.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Victim.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/LibrsModels.nuspec" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwIOlNNyksnuV7GgjkXsiMV3aY" />
@@ -97,8 +71,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612294698722</updated>
-      <workItem from="1612294707597" duration="5633000" />
+      <workItem from="1612294707597" duration="6028000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1612300746474</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612300746474</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,5 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
