@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f147b0a-0aa1-40eb-bd85-3428c35dc00f" name="Default Changelist" comment="Initial Commit" />
+    <list default="true" id="6f147b0a-0aa1-40eb-bd85-3428c35dc00f" name="Default Changelist" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,12 +29,9 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToOffenses.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToProperty.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/LibrsModels.nuspec" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Admin.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Arrestee.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrMod.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrStatute.cs" />
@@ -44,6 +45,9 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/VicInjury.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/VicOff.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Victim.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwIOlNNyksnuV7GgjkXsiMV3aY" />
@@ -75,7 +79,8 @@
       <workItem from="1612307396849" duration="440000" />
       <workItem from="1612376876252" duration="102000" />
       <workItem from="1612377752000" duration="1843000" />
-      <workItem from="1612460273659" duration="1390000" />
+      <workItem from="1612460273659" duration="1529000" />
+      <workItem from="1612463741861" duration="3456000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1612300746474</created>
@@ -98,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612461827583</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Upped to 0.0.5">
+      <created>1612461868154</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612461868154</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +135,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Minor updates to LIBRS Incident Model as the JSON Validator is being built." />
     <MESSAGE value="Added Default Values to Class Properties." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Default Values to Class Properties." />
+    <MESSAGE value="Upped to 0.0.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upped to 0.0.5" />
   </component>
 </project>

@@ -17,11 +17,20 @@ namespace LibrsModels.Classes
         [JsonProperty("warnings")]
         public List<object> Warnings { get; set; }
 
-        [JsonProperty("admin")]
-        public Admin Admin { get; set; }
-        
+        [JsonProperty("admin")] public Admin Admin { get; set; } = new Admin()
+        {
+            SegmentDescriptor = "10",
+            ExpansionBuffer = "                    ",
+            Padding = "                                                                                    "
+        };
+
         [JsonProperty("adminMod")]
-        public AdminMod AdminMod { get; set; }
+        public AdminMod AdminMod { get; set; } = new AdminMod()
+        {
+            SegmentDescriptor = "11",
+            ExpansionBuffer = "                    ",
+            Padding = "                                                          "
+        };
         
         [JsonProperty("offense")]
         public List<Offense> Offense { get; set; }
@@ -55,10 +64,10 @@ namespace LibrsModels.Classes
         
         [JsonProperty("arrestee")]
         public List<Arrestee> Arrestee { get; set; }
-        
+
         [JsonProperty("arrArm")]
         public List<ArrArm> ArrArm { get; set; }
-        
+
         [JsonProperty("arrStatute")]
         public List<ArrStatute> ArrStatute { get; set; }
         
