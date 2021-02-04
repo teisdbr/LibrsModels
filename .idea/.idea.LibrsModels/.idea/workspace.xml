@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6f147b0a-0aa1-40eb-bd85-3428c35dc00f" name="Default Changelist" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/Admin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/Admin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/ArrMod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/ArrMod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/Arrestee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/Arrestee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/PropMod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/PropMod.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +32,6 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToProperty.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/LibrsModels.nuspec" />
       <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/Arrestee.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrMod.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrStatute.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Offender.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Offense.cs" />
@@ -43,7 +39,6 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/PropertyOffense.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/PropDesc.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/PropertySeg.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/PropMod.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/VicInjury.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/VicOff.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Victim.cs" />
@@ -52,6 +47,10 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Admin.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/Arrestee.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/PropMod.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrMod.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwIOlNNyksnuV7GgjkXsiMV3aY" />
@@ -84,7 +83,7 @@
       <workItem from="1612376876252" duration="102000" />
       <workItem from="1612377752000" duration="1843000" />
       <workItem from="1612460273659" duration="1529000" />
-      <workItem from="1612463741861" duration="8845000" />
+      <workItem from="1612463741861" duration="11575000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1612300746474</created>
@@ -121,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612467424426</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="More default class Values">
+      <created>1612473545304</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612473545304</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +154,7 @@
     <MESSAGE value="Added Default Values to Class Properties." />
     <MESSAGE value="Upped to 0.0.5" />
     <MESSAGE value="Started on Default Values for the Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started on Default Values for the Classes" />
+    <MESSAGE value="More default class Values" />
+    <option name="LAST_COMMIT_MESSAGE" value="More default class Values" />
   </component>
 </project>

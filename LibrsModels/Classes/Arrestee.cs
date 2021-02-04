@@ -1,3 +1,4 @@
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
@@ -35,5 +36,12 @@ namespace LibrsModels.Classes
         [JsonProperty("dispositionUnder17")] public string DispositionUnder17 { get; set; } = " ";
 
         [JsonProperty("clearanceIndicator")] public string ClearanceIndicator { get; set; } = " ";
+
+        public Arrestee()
+        {
+            SegmentDescriptor = "60";
+            ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 17));
+            Padding = string.Concat(Enumerable.Repeat(" ", 30));
+        }
     }
 }
