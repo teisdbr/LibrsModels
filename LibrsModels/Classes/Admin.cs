@@ -1,3 +1,4 @@
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
@@ -15,5 +16,12 @@ namespace LibrsModels.Classes
         [JsonProperty("excpClearDate")] public string ExcpClearDate { get; set; } = "        ";
 
         [JsonIgnore] public object HasGroupAOffense { get; set; }
+        
+        public Admin()
+        {
+            SegmentDescriptor = "10";
+            ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 20));
+            Padding = string.Concat(Enumerable.Repeat(" ", 84));
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace LibrsModels.Classes
 
         [JsonProperty("incidentList")]
         public List<LibrsIncident> IncidentList { get; set; }
+        
     }
 }
