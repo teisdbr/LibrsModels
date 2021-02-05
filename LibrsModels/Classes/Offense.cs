@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LibrsModels.Classes
 {
@@ -53,6 +54,13 @@ namespace LibrsModels.Classes
         [JsonProperty("inchoate")] public string Inchoate { get; set; } = " ";
 
         [JsonProperty("offenseGroup")] public string OffenseGroup { get; set; } = " ";
+        
+        public Offense()
+        {
+            SegmentDescriptor = "20";
+            ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 16));
+            Padding = string.Concat(Enumerable.Repeat(" ", 68));
+        }
 
     }
 }

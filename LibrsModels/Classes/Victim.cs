@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
@@ -59,5 +60,12 @@ namespace LibrsModels.Classes
         public string OfficerAssignmentType { get; set; } = " ";
 
         [JsonProperty("officerOri")] public string OfficerOri { get; set; } = "         ";
+        
+        public Victim()
+        {
+            SegmentDescriptor = "52";
+            ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 6));
+            Padding = string.Concat(Enumerable.Repeat(" ", 81));
+        }
     }
 }

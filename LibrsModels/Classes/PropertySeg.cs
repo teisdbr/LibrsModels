@@ -1,3 +1,4 @@
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
@@ -9,5 +10,12 @@ namespace LibrsModels.Classes
 
         [JsonProperty("numOfRecoveredVehicles")]
         public string NumOfRecoveredVehicles { get; set; } = "  ";
+        
+        public PropertySeg()
+        {
+            SegmentDescriptor = "30";
+            ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 20));
+            Padding = string.Concat(Enumerable.Repeat(" ", 100));
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
@@ -18,5 +19,12 @@ namespace LibrsModels.Classes
         [JsonProperty("biasMotivation")] public string BiasMotivation { get; set; } = "  ";
 
         [JsonProperty("ethnicity")] public string Ethnicity { get; set; } = " ";
+        
+        public Offender()
+        {
+            SegmentDescriptor = "40";
+            ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 19));
+            Padding = string.Concat(Enumerable.Repeat(" ", 86));
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
@@ -12,5 +13,12 @@ namespace LibrsModels.Classes
 
         [JsonProperty("victimOffenderRelation")]
         public string VictimOffenderRelation { get; set; } = "  ";
+        
+        public VicOff()
+        {
+            SegmentDescriptor = "52";
+            ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 20));
+            Padding = string.Concat(Enumerable.Repeat(" ", 100));
+        }
     }
 }
