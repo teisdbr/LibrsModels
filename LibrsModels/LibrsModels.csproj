@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>0.0.25</PackageVersion>
+        <PackageVersion>0.0.26</PackageVersion>
         <Title>LibrsModels</Title>
         <Authors>Technology Engineers, Inc.</Authors>
         <Description>Contains C# Objects for LIBRS State Reporting. </Description>
