@@ -14,6 +14,7 @@
           <e p="AssociatedOffenses.cs" t="Include" />
           <e p="AssociatedProperty.cs" t="Include" />
           <e p="BaseLibrsIncident.cs" t="Include" />
+          <e p="Errors.cs" t="Include" />
           <e p="FbiValidate.cs" t="Include" />
           <e p="LibrsIncident.cs" t="Include" />
           <e p="Offender.cs" t="Include" />
@@ -33,6 +34,7 @@
           <e p="VicInjury.cs" t="Include" />
           <e p="VicOff.cs" t="Include" />
           <e p="Victim.cs" t="Include" />
+          <e p="Warnings.cs" t="Include" />
         </e>
         <e p="LibrsModels.csproj" t="IncludeRecursive" />
         <e p="LibrsModels.nuspec" t="Include" />

@@ -5,17 +5,14 @@ namespace LibrsModels.Classes
 {
     public class LibrsIncident
     {
-        [JsonIgnore]
         [JsonProperty("hasErrors")]
         public bool HasErrors { get; set; }
-
-        [JsonIgnore]
+        
         [JsonProperty("errors")]
-        public List<object> Errors { get; set; }
-
-        [JsonIgnore]
+        public List<Errors> Errors { get; set; }
+        
         [JsonProperty("warnings")]
-        public List<object> Warnings { get; set; }
+        public List<Warnings> Warnings { get; set; }
 
         [JsonProperty("admin")] public Admin Admin { get; set; }
 
@@ -69,6 +66,12 @@ namespace LibrsModels.Classes
         
         [JsonProperty("propertyLossTypeFlags")]
         public object PropertyLossTypeFlags { get; set; }
+        
+        [JsonProperty("actionType")]
+        public string ActionType { get; set; }
+        
+        [JsonProperty("incidentNumber")]
+        public string IncidentNumber { get; set; }
 
         [JsonIgnore]
         public bool InsertedtoDB { get; set; }

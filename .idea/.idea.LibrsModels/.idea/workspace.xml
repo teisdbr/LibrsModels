@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f147b0a-0aa1-40eb-bd85-3428c35dc00f" name="Default Changelist" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Errors.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Warnings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,9 +18,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/btruman/Desktop/LibrsModels/LibrsModels/Classes/AdminMod.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RepeatedProperties.cs" />
@@ -24,7 +26,6 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/FbiValidate.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/AssociatedOffenses.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/AssociatedProperty.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelatedOffenses.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelatedProperty.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RelationshipsToOffenses.cs" />
@@ -32,7 +33,6 @@
       <option value="$PROJECT_DIR$/LibrsModels/LibrsModels.nuspec" />
       <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Admin.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" />
@@ -50,6 +50,10 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/VicOff.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Victim.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/Warnings.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/Errors.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwIOlNNyksnuV7GgjkXsiMV3aY" />
@@ -82,7 +86,8 @@
       <workItem from="1612376876252" duration="102000" />
       <workItem from="1612377752000" duration="1843000" />
       <workItem from="1612460273659" duration="1529000" />
-      <workItem from="1612463741861" duration="14973000" />
+      <workItem from="1612463741861" duration="17274000" />
+      <workItem from="1612819104849" duration="4112000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1612300746474</created>
@@ -140,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612550943952</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished Adding Default Values">
+      <created>1612553968929</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612553968930</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
