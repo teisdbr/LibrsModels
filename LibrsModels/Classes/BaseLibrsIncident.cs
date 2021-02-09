@@ -11,8 +11,8 @@ namespace LibrsModels.Classes
         [JsonProperty("incidentNumber")]
         public string IncidentNumber { get; set; }
 
-        [JsonProperty("incidentList")]
-        public List<LibrsIncident> IncidentList { get; set; }
+        [JsonProperty("librsIncident")]
+        public LibrsIncident LibrsIncident { get; set; }
         
     }
 }

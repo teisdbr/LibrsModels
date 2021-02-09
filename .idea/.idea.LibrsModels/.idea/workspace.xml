@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f147b0a-0aa1-40eb-bd85-3428c35dc00f" name="Default Changelist" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Errors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrsModels/Classes/Warnings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibrsModels/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LibrsModels/LibrsModels.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +31,6 @@
       <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrArm.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Admin.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/AdminMod.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Arrestee.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/ArrMod.cs" />
@@ -49,11 +45,12 @@
       <option value="$PROJECT_DIR$/LibrsModels/Classes/VicInjury.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/VicOff.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Victim.cs" />
-      <option value="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/OldLibrsValues.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/LibrsIncident.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Warnings.cs" />
       <option value="$PROJECT_DIR$/LibrsModels/Classes/Errors.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/RootValidationObject.cs" />
+      <option value="$PROJECT_DIR$/LibrsModels/Classes/BaseLibrsIncident.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwIOlNNyksnuV7GgjkXsiMV3aY" />
@@ -87,7 +84,8 @@
       <workItem from="1612377752000" duration="1843000" />
       <workItem from="1612460273659" duration="1529000" />
       <workItem from="1612463741861" duration="17274000" />
-      <workItem from="1612819104849" duration="4112000" />
+      <workItem from="1612819104849" duration="4886000" />
+      <workItem from="1612899920430" duration="1486000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1612300746474</created>
@@ -152,7 +150,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612553968930</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Got Errors and Warnings included for the JsonValidator">
+      <created>1612827197464</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612827197464</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Upped Version">
+      <created>1612827425538</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612827425538</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +193,8 @@
     <MESSAGE value="Started on Default Values for the Classes" />
     <MESSAGE value="More default class Values" />
     <MESSAGE value="Finished Adding Default Values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Adding Default Values" />
+    <MESSAGE value="Got Errors and Warnings included for the JsonValidator" />
+    <MESSAGE value="Upped Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upped Version" />
   </component>
 </project>
