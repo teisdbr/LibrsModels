@@ -3,7 +3,26 @@ using System.Collections.Generic;
 
 namespace LibrsModels.Classes
 {
-    public class LibrsIncident
+    public interface ILibrsIncident
+    {
+        Admin Admin { get; }
+        List<Offense> Offense { get; }
+        PropertySeg PropertySeg { get; }
+        List<PropDesc> PropDesc { get; }
+        List<PropertyOffense> PropertyOffense { get; }
+        List<Offender> Offender { get; }
+        List<OffUsing> OffUsing { get; }
+        List<Victim> Victim { get; }
+        List<VicInjury> VicInjury { get; }
+        List<VicOff> VicOff { get; }
+        List<Arrestee> Arrestees { get; }
+        List<ArrArm> ArrArm { get; }
+        List<ArrStatute> ArrStatute { get; }
+        string ActionType { get; }
+        string IncidentNumber { get; }
+    }
+
+    public class LibrsIncident : ILibrsIncident
     {
         [JsonProperty("hasErrors")]
         public bool HasErrors { get; set; }
@@ -50,7 +69,7 @@ namespace LibrsModels.Classes
         public List<VicOff> VicOff { get; set; }
         
         [JsonProperty("arrestee")]
-        public List<Arrestee> Arrestee { get; set; }
+        public List<Arrestee> Arrestees { get; set; }
 
         [JsonProperty("arrArm")]
         public List<ArrArm> ArrArm { get; set; }
