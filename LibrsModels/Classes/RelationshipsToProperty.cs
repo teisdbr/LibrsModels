@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace LibrsModels.Classes
 {
-    public class RelationshipsToProperty : OldLibrsValues
+    public class RelationshipsToProperty : LegacyLibrsValues
         {
 
         

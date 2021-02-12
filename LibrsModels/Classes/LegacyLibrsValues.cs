@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 namespace LibrsModels.Classes
 {
-    public class OldLibrsValues
+    public class LegacyLibrsValues
     {
         [JsonProperty("entireLineSegment")]
         public string EntireLineSegment { get; set; }

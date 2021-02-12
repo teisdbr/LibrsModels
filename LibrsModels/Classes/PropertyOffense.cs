@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class PropertyOffense : OldLibrsValues
+    public class PropertyOffense : LegacyLibrsValues
     {
 
         [JsonProperty("propertySequenceNumber")]

@@ -5,7 +5,7 @@ namespace LibrsModels.Classes
 {
     
     //This one is a work in progress... Don't really know what goes in here. 
-    public class AdminMod : OldLibrsValues
+    public class AdminMod : LegacyLibrsValues
     {
         [JsonProperty("lrsNumber")]
         public string LRSNumber { get; set; }

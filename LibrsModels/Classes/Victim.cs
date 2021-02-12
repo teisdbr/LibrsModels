@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class Victim: OldLibrsValues
+    public class Victim: LegacyLibrsValues
     {
         [JsonIgnore]
         public int GetAllPossibleAggravatedFlags { get; set; }

@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class Arrestee: OldLibrsValues
+    public class Arrestee: LegacyLibrsValues
     {
 
         [JsonProperty("arrestSeqNum")] public string ArrestSeqNum { get; set; } = "   ";

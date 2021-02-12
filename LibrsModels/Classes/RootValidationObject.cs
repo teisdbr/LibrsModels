@@ -17,7 +17,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("forSubmission")] public bool ForSubmission { get; set; }
 
-        [JsonProperty("baseLibrsIncident")] public List<BaseLibrsIncident> BaseLibrsIncident { get; set; }
+        [JsonProperty("librsIncident")] public List<LibrsIncident> IncidentList { get; set; }
         
     }
 }

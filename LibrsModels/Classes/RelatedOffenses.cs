@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LibrsModels.Classes
 {
-    public class RelatedOffenses : OldLibrsValues
+    public class RelatedOffenses : LegacyLibrsValues
         {
         
         [JsonProperty("offenseSeqNum")]

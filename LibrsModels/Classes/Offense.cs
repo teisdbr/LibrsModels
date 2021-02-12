@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LibrsModels.Classes
 {
-    public class Offense : OldLibrsValues
+    public class Offense : LegacyLibrsValues
     {
         [JsonProperty("offenseSeqNum")] public string OffenseSeqNum { get; set; } = "   ";
 

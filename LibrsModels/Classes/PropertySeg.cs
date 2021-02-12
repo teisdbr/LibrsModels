@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class PropertySeg: OldLibrsValues
+    public class PropertySeg: LegacyLibrsValues
     {
 
         [JsonProperty("numOfStolenVehicles")] public string NumOfStolenVehicles { get; set; } = "  ";

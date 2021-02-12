@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class RelatedProperty: OldLibrsValues
+    public class RelatedProperty: LegacyLibrsValues
     {
         
         [JsonProperty("propertyLossType")]
