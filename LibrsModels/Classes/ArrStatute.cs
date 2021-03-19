@@ -26,7 +26,7 @@ namespace LibrsModels.Classes
         [JsonIgnore]
         public bool? OfficerDidAssignNibrs { get; set; }
 
-        [JsonProperty("inchoate")] public object Inchoate { get; set; } = " ";
+        [JsonProperty("inchoate")] public string Inchoate { get; set; } = " ";
 
         [JsonProperty("offenseGroup")] public string OffenseGroup { get; set; } = " ";
         
