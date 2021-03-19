@@ -69,7 +69,7 @@ namespace LibrsModels.Classes
         public List<VicOff> VicOff { get; set; }
         
         [JsonProperty("arrestee")]
-        public List<Arrestee> Arrestees { get; set; }
+        public List<Arrestee> Arrestee { get; set; }
 
         [JsonProperty("arrArm")]
         public List<ArrArm> ArrArm { get; set; }
