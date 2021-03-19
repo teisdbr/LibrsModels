@@ -19,10 +19,5 @@ namespace LibrsModels.Classes
 
         [JsonProperty("librsIncident")] public List<LibrsIncident> IncidentList { get; set; }
 
-        public RootValidationObject()
-        {
-            IncidentList.ForEach(incident => { incident.Admin.ORINumber = Ori; });
-        }
-        
     }
 }

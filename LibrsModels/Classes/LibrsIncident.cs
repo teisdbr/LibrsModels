@@ -101,9 +101,5 @@ namespace LibrsModels.Classes
         [JsonIgnore]
         public string EntireLineSegments { get; set; }
 
-        public LibrsIncident()
-        {
-            Admin.IncidentNumber = IncidentNumber;
-        }
     }
 }
