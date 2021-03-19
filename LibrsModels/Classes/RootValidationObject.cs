@@ -18,6 +18,11 @@ namespace LibrsModels.Classes
         [JsonProperty("forSubmission")] public bool ForSubmission { get; set; }
 
         [JsonProperty("librsIncident")] public List<LibrsIncident> IncidentList { get; set; }
+
+        public RootValidationObject()
+        {
+            IncidentList.ForEach(incident => { incident.Admin.ORINumber = Ori; });
+        }
         
     }
 }
