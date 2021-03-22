@@ -15,7 +15,7 @@ namespace LibrsModels.Classes
         List<Victim> Victim { get; }
         List<VicInjury> VicInjury { get; }
         List<VicOff> VicOff { get; }
-        List<Arrestee> Arrestees { get; }
+        List<Arrestee> Arrestee { get; }
         List<ArrArm> ArrArm { get; }
         List<ArrStatute> ArrStatute { get; }
         string ActionType { get; }
