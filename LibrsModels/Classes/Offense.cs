@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LibrsModels.Classes
 {
-    public class Offense : LegacyLibrsValues
+    public class Offense : LegacyLibrsValues, IPaddingFixer
     {
         [JsonProperty("offenseSeqNum")] public string OffenseSeqNum { get; set; } = "   ";
 
@@ -62,5 +62,23 @@ namespace LibrsModels.Classes
             Padding = string.Concat(Enumerable.Repeat(" ", 68));
         }
 
+        public void FixPaddings()
+        {
+            OffenseSeqNum = OffenseSeqNum.PadR(3);
+            LrsNumber = LrsNumber.PadR(12);
+            AttemptedCompleted = AttemptedCompleted.PadR(1).ToUpper();
+            OffConnecttoVic = OffConnecttoVic.PadR(3);
+            LocationType = LocationType.PadR(2);
+            Premises = Premises.PadR(2);
+            MethodOfEntry = MethodOfEntry.PadR(1);
+            CriminalActivity1 = CriminalActivity1.PadR(1);
+            CriminalActivity2 = CriminalActivity2.PadR(1);
+            CriminalActivity3 = CriminalActivity3.PadR(1);
+            WeaponForce1 = WeaponForce1.PadR(1);
+            WeaponForce2 = WeaponForce2.PadR(1);
+            WeaponForce3 = WeaponForce3.PadR(1);
+            AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
+            Inchoate = Inchoate.PadR(2);
+        }
     }
 }
