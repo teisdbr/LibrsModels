@@ -22,7 +22,7 @@ namespace LibrsModels.Classes
         string IncidentNumber { get; }
     }
 
-    public class LibrsIncident : ILibrsIncident
+    public class LibrsIncident : ILibrsIncident, IPaddingFixer
     {
         [JsonProperty("hasErrors")]
         public bool HasErrors { get; set; }
@@ -101,5 +101,10 @@ namespace LibrsModels.Classes
         [JsonIgnore]
         public string EntireLineSegments { get; set; }
 
+        public void FixPaddings()
+        {
+            ActionType = ActionType.PadR(1);
+            IncidentNumber = IncidentNumber.PadR(12);
+        }
     }
 }
