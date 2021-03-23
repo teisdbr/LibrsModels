@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class PropertySeg: LegacyLibrsValues
+    public class PropertySeg: LegacyLibrsValues, IPaddingFixer
     {
 
         [JsonProperty("numOfStolenVehicles")] public string NumOfStolenVehicles { get; set; } = "  ";
@@ -16,6 +16,12 @@ namespace LibrsModels.Classes
             SegmentDescriptor = "30";
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 20));
             Padding = string.Concat(Enumerable.Repeat(" ", 100));
+        }
+
+        public void FixPaddings()
+        {
+            NumOfStolenVehicles = NumOfStolenVehicles.PadL(2);
+            NumOfRecoveredVehicles = NumOfStolenVehicles.PadL(2);
         }
     }
 }
