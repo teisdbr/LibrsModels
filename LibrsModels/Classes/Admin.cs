@@ -15,7 +15,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("excpClearDate")] public string ExcpClearDate { get; set; } = "        ";
 
-        [JsonIgnore] public object HasGroupAOffense { get; set; }
+        [JsonIgnore] public bool HasGroupAOffense { get; set; }
         
         public Admin()
         {
