@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class Arrestee: LegacyLibrsValues
+    public class Arrestee: LegacyLibrsValues, IPaddingFixer
     {
 
         [JsonProperty("arrestSeqNum")] public string ArrestSeqNum { get; set; } = "   ";
@@ -42,6 +42,27 @@ namespace LibrsModels.Classes
             SegmentDescriptor = "60";
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 17));
             Padding = string.Concat(Enumerable.Repeat(" ", 30));
+        }
+
+        public void FixPaddings()
+        {
+            ArrestSeqNum = ArrestSeqNum.PadL(3);
+            ArrestNumber = ArrestNumber.PadL(12);
+            ArrTransactionNumber = ArrTransactionNumber.PadL(15);
+            ArresteeName = ArresteeName.PadL(20);
+            //TODO: Change arrest date to datetime type and extract string in librs format 
+            ArrestDate = ArrestDate.PadL(8);
+            ArrestType = ArrestType.PadL(1);
+            MultipleArresteeIndicator = MultipleArresteeIndicator.PadL(1);
+            Age = Age.PadL(3);
+            //TODO: Change dob to datetime type and extract string in librs format 
+            DOB = DOB.PadL(8);
+            Sex = Sex.PadL(1);
+            Race = Race.PadL(1);
+            Ethnicity = Ethnicity.PadL(1);
+            ResidentStatus = ResidentStatus.PadL(1);
+            DispositionUnder17 = DispositionUnder17.PadL(1);
+            ClearanceIndicator = ClearanceIndicator.PadL(1);
         }
     }
 }
