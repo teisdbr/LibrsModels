@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class Victim: LegacyLibrsValues
+    public class Victim: LegacyLibrsValues, IPaddingFixer
     {
         [JsonIgnore]
         public int GetAllPossibleAggravatedFlags { get; set; }
@@ -66,6 +66,22 @@ namespace LibrsModels.Classes
             SegmentDescriptor = "52";
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 6));
             Padding = string.Concat(Enumerable.Repeat(" ", 81));
+        }
+
+        public void FixPaddings()
+        {
+            VictimSeqNum = VictimSeqNum.PadL(3);
+            VictimType = VictimType.PadL(1);
+            Age = Age.PadL(3);
+            Ethnicity = Ethnicity.PadL(1);
+            ResidentStatus = ResidentStatus.PadL(1);
+            AggravatedAssault1 = AggravatedAssault1.PadL(2);
+            AggravatedAssault2 = AggravatedAssault2.PadL(2);
+            AggravatedAssault3 = AggravatedAssault3.PadL(2);
+            AdditionalHomicide = AdditionalHomicide.PadL(1);
+            OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2);
+            OfficerAssignmentType = OfficerAssignmentType.PadL(1);
+            OfficerOri = OfficerOri.PadL(9);
         }
     }
 }
