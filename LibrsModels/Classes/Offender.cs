@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class Offender : LegacyLibrsValues
+    public class Offender : LegacyLibrsValues, IPaddingFixer
     {
 
         [JsonProperty("offenderSeqNum")] public string OffenderSeqNum { get; set; } = "   ";
@@ -25,6 +25,18 @@ namespace LibrsModels.Classes
             SegmentDescriptor = "40";
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 19));
             Padding = string.Concat(Enumerable.Repeat(" ", 86));
+        }
+
+        public void FixPaddings()
+        {
+            OffenderSeqNum = OffenderSeqNum.PadL(3);
+            Age = Age.PadL(3);
+            //TODO: Change dob to datetime type and extract string in librs format 
+            Dob = Dob.PadL(8);
+            Sex = Sex.PadL(1);
+            Race = Race.PadL(1);
+            BiasMotivation = BiasMotivation.PadL(2);
+            Ethnicity = Ethnicity.PadL(1);
         }
     }
 }
