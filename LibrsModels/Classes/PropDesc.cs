@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class PropDesc : LegacyLibrsValues
+    public class PropDesc : LegacyLibrsValues, IPaddingFixer
     {
 
         [JsonProperty("propertySeqNum")] public string PropertySeqNum { get; set; } = "   ";
@@ -46,6 +46,19 @@ namespace LibrsModels.Classes
             SegmentDescriptor = "31";
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 17));
             Padding = string.Concat(Enumerable.Repeat(" ", 67));
+        }
+
+        public void FixPaddings()
+        {
+            PropertyLossType = PropertyLossType.PadL(2);
+            PropertyDescription = PropertyDescription.PadL(2);
+            PropertyValue = PropertyValue.PadL(9);
+            //TODO: Change date recovered to datetime type and extract string in librs format 
+            DateRecovered = DateRecovered.PadL(8);
+            SuspectedDrugType = SuspectedDrugType.PadL(2);
+            EstimatedDrugQty = EstimatedDrugQty.PadL(13);
+            TypeDrugMeas = TypeDrugMeas.PadL(2);
+            PropertySeqNum = PropertySeqNum.PadL(3);
         }
     }
 }
