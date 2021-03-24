@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace LibrsModels.Classes
 {
-    public class ArrArm : LegacyLibrsValues
+    public class ArrArm : LegacyLibrsValues, IPaddingFixer
     {
 
         [JsonProperty("arrestSeqNum")] public string ArrestSeqNum { get; set; } = "   ";
@@ -15,6 +15,12 @@ namespace LibrsModels.Classes
             SegmentDescriptor = "61";
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 20));
             Padding = string.Concat(Enumerable.Repeat(" ", 52));
+        }
+
+        public void FixPaddings()
+        {
+            ArrestSeqNum = ArrestSeqNum.PadL(3);
+            ArrestArmedWith = ArrestArmedWith.PadL(3);
         }
     }
 }
