@@ -67,7 +67,7 @@ namespace LibrsModels.Classes
             OffenseSeqNum = OffenseSeqNum.PadL(3, '0');
             LrsNumber = LrsNumber.PadR(12);
             AttemptedCompleted = AttemptedCompleted.PadR(1).ToUpper();
-            OffConnecttoVic = OffConnecttoVic.PadR(3);
+            OffConnecttoVic = OffConnecttoVic.PadL(3, '0');
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);
             MethodOfEntry = MethodOfEntry.PadR(1);

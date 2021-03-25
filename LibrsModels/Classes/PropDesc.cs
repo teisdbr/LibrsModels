@@ -50,7 +50,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            PropertyLossType = PropertyLossType.PadL(2);
+            PropertyLossType = PropertyLossType.PadL(1);
             PropertyDescription = PropertyDescription.PadL(2);
             PropertyValue = PropertyValue.PadL(9);
             //TODO: Change date recovered to datetime type and extract string in librs format 
