@@ -58,7 +58,7 @@ namespace LibrsModels.Classes
             SuspectedDrugType = SuspectedDrugType.PadL(2);
             EstimatedDrugQty = EstimatedDrugQty.PadL(13);
             TypeDrugMeas = TypeDrugMeas.PadL(2);
-            PropertySeqNum = PropertySeqNum.PadL(3);
+            PropertySeqNum = PropertySeqNum.PadL(3, '0');;
         }
     }
 }

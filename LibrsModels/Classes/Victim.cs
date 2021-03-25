@@ -70,7 +70,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            VictimSeqNum = VictimSeqNum.PadL(3);
+            VictimSeqNum = VictimSeqNum.PadL(3, '0');;
             VictimType = VictimType.PadL(1);
             Age = Age.PadL(3);
             Ethnicity = Ethnicity.PadL(1);

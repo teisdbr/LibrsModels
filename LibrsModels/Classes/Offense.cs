@@ -64,7 +64,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            OffenseSeqNum = OffenseSeqNum.PadR(3);
+            OffenseSeqNum = OffenseSeqNum.PadL(3, '0');
             LrsNumber = LrsNumber.PadR(12);
             AttemptedCompleted = AttemptedCompleted.PadR(1).ToUpper();
             OffConnecttoVic = OffConnecttoVic.PadR(3);

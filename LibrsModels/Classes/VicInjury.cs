@@ -19,7 +19,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            VictimSeqNum = VictimSeqNum.PadL(3);
+            VictimSeqNum = VictimSeqNum.PadL(3, '0');;
             InjuryType = InjuryType.PadL(1);
         }
     }

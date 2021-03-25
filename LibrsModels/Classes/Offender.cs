@@ -29,7 +29,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            OffenderSeqNum = OffenderSeqNum.PadL(3);
+            OffenderSeqNum = OffenderSeqNum.PadL(3, '0');;
             Age = Age.PadL(3);
             //TODO: Change dob to datetime type and extract string in librs format 
             Dob = Dob.PadL(8);

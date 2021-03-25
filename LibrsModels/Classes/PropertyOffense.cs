@@ -30,8 +30,8 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            PropertySequenceNumber = PropertySequenceNumber.PadL(3);
-            OffenseSequenceNumber = OffenseSequenceNumber.PadL(3);
+            PropertySequenceNumber = PropertySequenceNumber.PadL(3, '0');;
+            OffenseSequenceNumber = OffenseSequenceNumber.PadL(3, '0');;
         }
     }
 }

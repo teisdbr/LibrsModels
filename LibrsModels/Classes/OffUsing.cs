@@ -19,7 +19,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            OffenderSeqNum = OffenderSeqNum.PadL(3);
+            OffenderSeqNum = OffenderSeqNum.PadL(3, '0');;
             OffUsingGamingMot = OffUsingGamingMot.PadL(4);
         }
     }

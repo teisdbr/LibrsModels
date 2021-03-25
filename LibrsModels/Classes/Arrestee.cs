@@ -46,7 +46,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            ArrestSeqNum = ArrestSeqNum.PadL(3);
+            ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
             ArrestNumber = ArrestNumber.PadL(12);
             ArrTransactionNumber = ArrTransactionNumber.PadL(15);
             ArresteeName = ArresteeName.PadL(20);

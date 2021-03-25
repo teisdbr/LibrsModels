@@ -23,8 +23,8 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            VictimSeqNum = VictimSeqNum.PadL(3);
-            OffenderNumberRelated = OffenderNumberRelated.PadL(3);
+            VictimSeqNum = VictimSeqNum.PadL(3, '0');;
+            OffenderNumberRelated = OffenderNumberRelated.PadL(3, '0');;
             VictimOffenderRelation = VictimOffenderRelation.PadL(2);
         }
     }
