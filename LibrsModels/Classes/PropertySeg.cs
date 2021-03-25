@@ -20,8 +20,8 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            NumOfStolenVehicles = NumOfStolenVehicles.PadL(2, '0');
-            NumOfRecoveredVehicles = NumOfStolenVehicles.PadL(2, '0');
+            NumOfStolenVehicles = NumOfStolenVehicles.PadL(2);
+            NumOfRecoveredVehicles = NumOfRecoveredVehicles.PadL(2);
         }
     }
 }
