@@ -20,6 +20,16 @@ namespace LibrsModels.Classes
         List<ArrStatute> ArrStatute { get; }
         string ActionType { get; }
         string IncidentNumber { get; }
+        
+        /// <summary>
+        /// List of errors as returned by the validation server
+        /// </summary>
+        List<Error> Errors { get; }
+        
+        /// <summary>
+        /// List of warnings as returned by the validation server.
+        /// </summary>
+        List<Warning> Warnings { get; }
     }
 
     public class LibrsIncident : ILibrsIncident, IPaddingFixer
@@ -28,10 +38,10 @@ namespace LibrsModels.Classes
         public bool HasErrors { get; set; }
         
         [JsonProperty("errors")]
-        public List<Errors> Errors { get; set; }
+        public List<Error> Errors { get; set; }
         
         [JsonProperty("warnings")]
-        public List<Warnings> Warnings { get; set; }
+        public List<Warning> Warnings { get; set; }
 
         [JsonProperty("admin")] public Admin Admin { get; set; }
 
