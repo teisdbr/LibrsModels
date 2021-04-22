@@ -17,6 +17,8 @@ namespace LibrsModels.Classes
         [JsonProperty("reportMonth")] public int ReportMonth { get; set; }
 
         [JsonProperty("forSubmission")] public bool ForSubmission { get; set; }
+        
+        [JsonProperty("ZeroReportSegment")] public ZeroReport ZeroReport { get; set; }
 
         [JsonProperty("librsIncident")] public List<LibrsIncident> IncidentList { get; set; }
 
