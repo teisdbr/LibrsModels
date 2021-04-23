@@ -20,7 +20,7 @@ namespace LibrsModels.Classes
         public void FixPaddings()
         {
             ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
-            ArrestArmedWith = ArrestArmedWith.PadL(3);
+            ArrestArmedWith = ArrestArmedWith.PadR(3);
         }
     }
 }

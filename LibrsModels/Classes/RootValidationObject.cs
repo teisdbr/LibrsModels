@@ -37,37 +37,41 @@ namespace LibrsModels.Classes
             // Get all the properties of the object
             foreach (var inc in il.GetType().GetProperties())
             {
-                // For each property check if the property implements the IPaddingFixer Interface
-                if (typeof(IPaddingFixer).IsAssignableFrom(inc.PropertyType))
+                var propertyValue = inc.GetValue(il);
+                if (propertyValue != null)
                 {
-                    // If it implements the desired interface then extract value of the property
-                    IPaddingFixer converter = (IPaddingFixer) inc.GetValue(il);
-                    // Call the FixPadding function implemented by the interface
-                    converter.FixPaddings();
-                    // call Recursive function so that all the properties
-                    // which implement IPaddingFixer interface inside this property
-                    Recursive(converter);
-                }
-
-                // For each property check if it a list
-                if (inc.PropertyType.IsGenericType &&
-                    (inc.PropertyType.GetGenericTypeDefinition() == typeof(List<>)))
-                {
-                    // Get the value of the list and cast as list
-                    var segList = ((IEnumerable) inc.GetValue(il))?.Cast<object>().ToList();
-                    segList?.ForEach(sl =>
+                    // For each property check if the property implements the IPaddingFixer Interface
+                    if (typeof(IPaddingFixer).IsAssignableFrom(inc.PropertyType))
                     {
-                        // For each value in the list check if they implement IPaddingFixer Interface
-                        if (sl is IPaddingFixer)
+                        // If it implements the desired interface then extract value of the property
+                        IPaddingFixer converter = (IPaddingFixer) propertyValue;
+                        // Call the FixPadding function implemented by the interface
+                        converter.FixPaddings();
+                        // call Recursive function so that all the properties
+                        // which implement IPaddingFixer interface inside this property
+                        Recursive(converter);
+                    }
+
+                    // For each property check if it a list
+                    if (inc.PropertyType.IsGenericType &&
+                        (inc.PropertyType.GetGenericTypeDefinition() == typeof(List<>)))
+                    {
+                        // Get the value of the list and cast as list
+                        var segList = ((IEnumerable) propertyValue)?.Cast<object>().ToList();
+                        segList?.ForEach(sl =>
                         {
-                            var converter = (IPaddingFixer) sl;
-                            // Call the FixPadding function implemented by the interface
-                            converter.FixPaddings();
-                            // call Recursive function so that all the properties
-                            // which implement IPaddingFixer interface inside this property
-                            Recursive(converter);
-                        }
-                    });
+                            // For each value in the list check if they implement IPaddingFixer Interface
+                            if (sl is IPaddingFixer)
+                            {
+                                var converter = (IPaddingFixer) sl;
+                                // Call the FixPadding function implemented by the interface
+                                converter.FixPaddings();
+                                // call Recursive function so that all the properties
+                                // which implement IPaddingFixer interface inside this property
+                                Recursive(converter);
+                            }
+                        });
+                    }
                 }
             }
         }
