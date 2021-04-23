@@ -20,7 +20,7 @@ namespace LibrsModels.Classes
         
         [JsonProperty("ZeroReportSegment")] public ZeroReport ZeroReport { get; set; }
 
-        [JsonProperty("librsIncident")] public List<LibrsIncident> IncidentList { get; set; }
+        [JsonProperty("incidentList")] public List<LibrsIncident> IncidentList { get; set; }
 
         public void FixPaddings()
         {
