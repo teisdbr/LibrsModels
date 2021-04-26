@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace LibrsModels.Classes
 {
-    public class RootValidationObject: IPaddingFixer
+    public class RootValidationObject: IPaddingFixer, IRootValidationObject<LibrsIncident>
     {
         [JsonProperty("spec")] public string Spec { get; set; }
 
@@ -18,7 +18,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("forSubmission")] public bool ForSubmission { get; set; }
         
-        [JsonProperty("ZeroReportSegment")] public ZeroReport ZeroReport { get; set; }
+        [JsonProperty("ZeroReport")] public ZeroReport ZeroReport { get; set; }
 
         [JsonProperty("incidentList")] public List<LibrsIncident> IncidentList { get; set; }
 
