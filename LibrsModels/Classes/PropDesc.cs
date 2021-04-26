@@ -52,7 +52,7 @@ namespace LibrsModels.Classes
         {
             PropertyLossType = PropertyLossType.PadL(1);
             PropertyDescription = PropertyDescription.PadL(2);
-            PropertyValue = PropertyValue.PadR(9);
+            PropertyValue = PropertyValue.PadL(9,'0');
             //TODO: Change date recovered to datetime type and extract string in librs format 
             DateRecovered = DateRecovered.PadL(8);
             SuspectedDrugType = SuspectedDrugType.PadL(2);
