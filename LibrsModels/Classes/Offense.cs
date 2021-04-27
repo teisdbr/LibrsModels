@@ -74,9 +74,9 @@ namespace LibrsModels.Classes
             CriminalActivity1 = CriminalActivity1.PadR(1);
             CriminalActivity2 = CriminalActivity2.PadR(1);
             CriminalActivity3 = CriminalActivity3.PadR(1);
-            WeaponForce1 = WeaponForce1.PadR(1);
-            WeaponForce2 = WeaponForce2.PadR(1);
-            WeaponForce3 = WeaponForce3.PadR(1);
+            WeaponForce1 = WeaponForce1.PadR(3);
+            WeaponForce2 = WeaponForce2.PadR(3);
+            WeaponForce3 = WeaponForce3.PadR(3);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);
         }
