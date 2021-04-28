@@ -30,13 +30,24 @@ namespace LibrsModels.Classes
         public void FixPaddings()
         {
             OffenderSeqNum = OffenderSeqNum.PadL(3, '0');;
-            Age = Age.PadL(3);
+            Age = PadOffenderAge(Age);
             //TODO: Change dob to datetime type and extract string in librs format 
             Dob = Dob.PadL(8);
             Sex = Sex.PadL(1);
             Race = Race.PadL(1);
             BiasMotivation = BiasMotivation.PadL(2);
             Ethnicity = Ethnicity.PadL(1);
+        }
+
+        private string PadOffenderAge(string age)
+        {
+            if (age.Contains('E'))
+            {
+                return age.PadL(3, '0');
+            }
+
+            // Leave the third space with whitespace, but pad with 0, the leftmost 2 chars
+            return age.PadL(2, '0') + ' ';
         }
     }
 }

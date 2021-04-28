@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using TeUtil.Extensions;
 
 namespace LibrsModels.Classes
 {
@@ -72,16 +73,32 @@ namespace LibrsModels.Classes
         {
             VictimSeqNum = VictimSeqNum.PadL(3, '0');;
             VictimType = VictimType.PadL(1);
-            Age = Age.PadL(3);
+            Age = PadVictimAge(Age);
             Ethnicity = Ethnicity.PadL(1);
             ResidentStatus = ResidentStatus.PadL(1);
-            AggravatedAssault1 = AggravatedAssault1.PadL(2);
-            AggravatedAssault2 = AggravatedAssault2.PadL(2);
-            AggravatedAssault3 = AggravatedAssault3.PadL(2);
+            AggravatedAssault1 = AggravatedAssault1.PadL(2,'0');
+            AggravatedAssault2 = AggravatedAssault2.PadL(2,'0');
+            AggravatedAssault3 = AggravatedAssault3.PadL(2,'0');
             AdditionalHomicide = AdditionalHomicide.PadL(1);
-            OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2);
+            OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2, '0');
             OfficerAssignmentType = OfficerAssignmentType.PadL(1);
             OfficerOri = OfficerOri.PadL(9);
+        }
+
+        private string PadVictimAge(string age)
+        {
+            // If estimated, pad 3 characters
+            if (age.Contains('E'))
+            {
+                return age.PadL(3, '0');
+            } 
+            else if (int.TryParse(age, out var parsedAge))
+            {
+                return parsedAge.ToString().PadL(2, '0') + ' ';
+            }
+
+            // If all else fails, pad to 3 spaces. This helps against 'NB ' for instance.
+            return age.PadR(3);
         }
     }
 }
