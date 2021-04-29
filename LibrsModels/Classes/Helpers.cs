@@ -11,7 +11,10 @@ namespace LibrsModels.Classes
             {
                 return numeric.ToString().PadLeft(length, paddingCharacter);
             }
-            return property.IsNullBlankOrEmpty() ? property.PadLeft(length, defaultChar) : property.PadLeft(length, paddingCharacter);
+
+            if (!property.IsNullBlankOrEmpty()) return property.PadLeft(length, paddingCharacter);
+            property = property ?? "";
+            return property.PadLeft(length, defaultChar);
         }
         public static string PadR(this string property, int length, char paddingCharacter = ' ')
         {
