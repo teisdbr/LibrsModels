@@ -87,6 +87,7 @@ namespace LibrsModels.Classes
 
         private string PadVictimAge(string age)
         {
+            if (age.IsNullBlankOrEmpty()) return "".PadR(3);
             // If estimated, pad 3 characters
             if (age.Contains('E'))
             {

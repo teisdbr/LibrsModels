@@ -1,5 +1,6 @@
 using System.Linq;
 using Newtonsoft.Json;
+using TeUtil.Extensions;
 
 namespace LibrsModels.Classes
 {
@@ -66,6 +67,7 @@ namespace LibrsModels.Classes
         }
         private string PadArresteeAge(string age)
         {
+            if (age.IsNullBlankOrEmpty()) return "".PadR(3);
             if (age.Contains('E'))
             {
                 return age.PadL(3, '0');
@@ -73,6 +75,7 @@ namespace LibrsModels.Classes
 
             // Leave the third space with whitespace, but pad with 0, the leftmost 2 chars
             return age.PadL(2, '0') + ' ';
+
         }
     }
 }
