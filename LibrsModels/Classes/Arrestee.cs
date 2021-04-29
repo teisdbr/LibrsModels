@@ -54,7 +54,7 @@ namespace LibrsModels.Classes
             ArrestDate = ArrestDate.PadL(8);
             ArrestType = ArrestType.PadR(1);
             MultipleArresteeIndicator = MultipleArresteeIndicator.PadR(1);
-            Age = Age.PadL(3);
+            Age = PadArresteeAge(Age);
             //TODO: Change dob to datetime type and extract string in librs format 
             DOB = DOB.PadL(8);
             Sex = Sex.PadR(1);
@@ -63,6 +63,16 @@ namespace LibrsModels.Classes
             ResidentStatus = ResidentStatus.PadR(1);
             DispositionUnder17 = DispositionUnder17.PadR(1);
             ClearanceIndicator = ClearanceIndicator.PadR(1);
+        }
+        private string PadArresteeAge(string age)
+        {
+            if (age.Contains('E'))
+            {
+                return age.PadL(3, '0');
+            }
+
+            // Leave the third space with whitespace, but pad with 0, the leftmost 2 chars
+            return age.PadL(2, '0') + ' ';
         }
     }
 }
