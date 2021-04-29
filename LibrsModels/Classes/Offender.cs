@@ -33,10 +33,10 @@ namespace LibrsModels.Classes
             Age = PadOffenderAge(Age);
             //TODO: Change dob to datetime type and extract string in librs format 
             Dob = Dob.PadL(8);
-            Sex = Sex.PadL(1);
-            Race = Race.PadL(1);
+            Sex = Sex.PadR(1);
+            Race = Race.PadR(1);
             BiasMotivation = BiasMotivation.PadL(2);
-            Ethnicity = Ethnicity.PadL(1);
+            Ethnicity = Ethnicity.PadR(1);
         }
 
         private string PadOffenderAge(string age)

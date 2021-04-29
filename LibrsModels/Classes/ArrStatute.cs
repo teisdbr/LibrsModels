@@ -41,7 +41,7 @@ namespace LibrsModels.Classes
         {
             ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
             ArrestConToOffense = ArrestConToOffense.PadL(15);
-            ArresteInchoate = ArresteInchoate.PadL(2);
+            ArresteInchoate = ArresteInchoate.PadR(2);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadL(3);
             LrsNumber = LrsNumber.PadL(12);
         }

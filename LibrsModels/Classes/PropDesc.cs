@@ -51,11 +51,11 @@ namespace LibrsModels.Classes
         public void FixPaddings()
         {
             PropertyLossType = PropertyLossType.PadL(1);
-            PropertyDescription = PropertyDescription.PadL(2);
+            PropertyDescription = PropertyDescription.PadL(2, '0');
             PropertyValue = PropertyValue.PadL(9,'0');
             //TODO: Change date recovered to datetime type and extract string in librs format 
             DateRecovered = DateRecovered.PadL(8);
-            SuspectedDrugType = SuspectedDrugType.PadL(2);
+            SuspectedDrugType = SuspectedDrugType.PadR(2);
             EstimatedDrugQty = EstimatedDrugQty.PadL(13);
             TypeDrugMeas = TypeDrugMeas.PadL(2);
             PropertySeqNum = PropertySeqNum.PadL(3, '0');;

@@ -64,9 +64,11 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
+            // If seqNum is not provided set it to "   "
             OffenseSeqNum = OffenseSeqNum.PadL(3, '0');
             LrsNumber = LrsNumber.PadR(12);
             AttemptedCompleted = AttemptedCompleted.PadR(1).ToUpper();
+            // If seqNum is not provided set it to "   "
             OffConnecttoVic = OffConnecttoVic.PadL(3, '0');
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);

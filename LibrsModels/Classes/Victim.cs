@@ -72,16 +72,16 @@ namespace LibrsModels.Classes
         public void FixPaddings()
         {
             VictimSeqNum = VictimSeqNum.PadL(3, '0');;
-            VictimType = VictimType.PadL(1);
+            VictimType = VictimType.PadR(1);
             Age = PadVictimAge(Age);
-            Ethnicity = Ethnicity.PadL(1);
-            ResidentStatus = ResidentStatus.PadL(1);
+            Ethnicity = Ethnicity.PadR(1);
+            ResidentStatus = ResidentStatus.PadR(1);
             AggravatedAssault1 = AggravatedAssault1.PadL(2,'0');
             AggravatedAssault2 = AggravatedAssault2.PadL(2,'0');
             AggravatedAssault3 = AggravatedAssault3.PadL(2,'0');
-            AdditionalHomicide = AdditionalHomicide.PadL(1);
+            AdditionalHomicide = AdditionalHomicide.PadR(1);
             OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2, '0');
-            OfficerAssignmentType = OfficerAssignmentType.PadL(1);
+            OfficerAssignmentType = OfficerAssignmentType.PadR(1);
             OfficerOri = OfficerOri.PadL(9);
         }
 

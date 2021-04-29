@@ -25,7 +25,7 @@ namespace LibrsModels.Classes
         {
             VictimSeqNum = VictimSeqNum.PadL(3, '0');;
             OffenderNumberRelated = OffenderNumberRelated.PadL(3, '0');;
-            VictimOffenderRelation = VictimOffenderRelation.PadL(2);
+            VictimOffenderRelation = VictimOffenderRelation.PadR(2);
         }
     }
 }
