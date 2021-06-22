@@ -40,6 +40,8 @@ namespace LibrsModels.Classes
 
         [JsonProperty("sex")] public string Sex { get; set; } = " ";
 
+        [JsonProperty("gender")] public string Gender { get; set; } = "   ";
+        
         [JsonProperty("race")] public string Race { get; set; } = " ";
 
         [JsonProperty("ethnicity")] public string Ethnicity { get; set; } = " ";
@@ -53,6 +55,8 @@ namespace LibrsModels.Classes
         [JsonProperty("aggravatedAssault3")] public string AggravatedAssault3 { get; set; } = "  ";
 
         [JsonProperty("additionalHomicide")] public string AdditionalHomicide { get; set; } = " ";
+
+        [JsonProperty("precipitatingOffense")] public string PrecipitatingOffense { get; set; } = "   ";
 
         [JsonProperty("officerActivityCircumstance")]
         public string OfficerActivityCircumstance { get; set; } = "  ";
@@ -75,6 +79,7 @@ namespace LibrsModels.Classes
             VictimType = VictimType.PadR(1);
             Age = PadVictimAge(Age);
             Ethnicity = Ethnicity.PadR(1);
+            Gender = Gender.PadR(3);
             ResidentStatus = ResidentStatus.PadR(1);
             AggravatedAssault1 = AggravatedAssault1.PadL(2,'0');
             AggravatedAssault2 = AggravatedAssault2.PadL(2,'0');
@@ -82,6 +87,7 @@ namespace LibrsModels.Classes
             AdditionalHomicide = AdditionalHomicide.PadR(1);
             OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2, '0');
             OfficerAssignmentType = OfficerAssignmentType.PadR(1);
+            PrecipitatingOffense = PrecipitatingOffense.PadR(3);
             OfficerOri = OfficerOri.PadL(9);
         }
 

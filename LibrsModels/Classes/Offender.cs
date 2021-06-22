@@ -16,7 +16,8 @@ namespace LibrsModels.Classes
         [JsonProperty("sex")] public string Sex { get; set; } = " ";
 
         [JsonProperty("race")] public string Race { get; set; } = " ";
-
+        
+        [JsonProperty("gender")] public string Gender { get; set; } = "   ";
         [JsonProperty("biasMotivation")] public string BiasMotivation { get; set; } = "  ";
 
         [JsonProperty("ethnicity")] public string Ethnicity { get; set; } = " ";
@@ -35,6 +36,7 @@ namespace LibrsModels.Classes
             //TODO: Change dob to datetime type and extract string in librs format 
             Dob = Dob.PadL(8);
             Sex = Sex.PadR(1);
+            Gender = Gender.PadR(3);
             Race = Race.PadR(1);
             BiasMotivation = BiasMotivation.PadL(2);
             Ethnicity = Ethnicity.PadR(1);

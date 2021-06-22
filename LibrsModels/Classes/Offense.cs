@@ -30,6 +30,19 @@ namespace LibrsModels.Classes
 
         [JsonProperty("weaponForce3")] public string WeaponForce3 { get; set; } = "   ";
 
+        [JsonProperty("stolenFirearm1")] public string StolenFirearm1 { get; set; } = " ";
+        
+        [JsonProperty("stolenFirearm2")] public string StolenFirearm2 { get; set; } = " ";
+        
+        [JsonProperty("stolenFirearm3")] public string StolenFirearm3 { get; set; } = " ";
+        
+        [JsonProperty("dischargedFirearm1")] public string DischargedFirearm1 { get; set; } = " ";
+        
+        [JsonProperty("dischargedFirearm2")] public string DischargedFirearm2 { get; set; } = " ";
+        
+        [JsonProperty("dischargedFirearm3")] public string DischargedFirearm3 { get; set; } = " ";
+        [JsonProperty("cargoTheft")] public string CargoTheft { get; set; } = " ";
+        
         [JsonProperty("agencyAssignedNibrs")] public string AgencyAssignedNibrs { get; set; } = "   ";
 
         [JsonIgnore]
@@ -79,6 +92,13 @@ namespace LibrsModels.Classes
             WeaponForce1 = WeaponForce1.PadR(3);
             WeaponForce2 = WeaponForce2.PadR(3);
             WeaponForce3 = WeaponForce3.PadR(3);
+            CargoTheft = CargoTheft.PadR(1);
+            StolenFirearm1 = StolenFirearm1.PadL(1);
+            StolenFirearm2 = StolenFirearm2.PadL(1);
+            StolenFirearm3 = StolenFirearm3.PadL(1);
+            DischargedFirearm1 = DischargedFirearm1.PadL(1);
+            DischargedFirearm2 = DischargedFirearm2.PadL(1);
+            DischargedFirearm3 = DischargedFirearm3.PadL(1);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);
         }
