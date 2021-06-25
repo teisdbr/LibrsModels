@@ -18,31 +18,13 @@ namespace LibrsModels.Classes
 
         [JsonProperty("methodOfEntry")] public string MethodOfEntry { get; set; } = " ";
 
-        [JsonProperty("criminalActivity1")] public string CriminalActivity1 { get; set; } = " ";
-
-        [JsonProperty("criminalActivity2")] public string CriminalActivity2 { get; set; } = " ";
-
-        [JsonProperty("criminalActivity3")] public string CriminalActivity3 { get; set; } = " ";
-
-        [JsonProperty("weaponForce1")] public string WeaponForce1 { get; set; } = "   ";
-
-        [JsonProperty("weaponForce2")] public string WeaponForce2 { get; set; } = "   ";
-
-        [JsonProperty("weaponForce3")] public string WeaponForce3 { get; set; } = "   ";
-
-        [JsonProperty("stolenFirearm1")] public string StolenFirearm1 { get; set; } = " ";
+        [JsonProperty("criminalActivity")] public CriminalActivity CriminalActivity { get; set; }
         
-        [JsonProperty("stolenFirearm2")] public string StolenFirearm2 { get; set; } = " ";
         
-        [JsonProperty("stolenFirearm3")] public string StolenFirearm3 { get; set; } = " ";
+        [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; }
         
-        [JsonProperty("dischargedFirearm1")] public string DischargedFirearm1 { get; set; } = " ";
-        
-        [JsonProperty("dischargedFirearm2")] public string DischargedFirearm2 { get; set; } = " ";
-        
-        [JsonProperty("dischargedFirearm3")] public string DischargedFirearm3 { get; set; } = " ";
         [JsonProperty("cargoTheft")] public string CargoTheft { get; set; } = " ";
-        
+
         [JsonProperty("agencyAssignedNibrs")] public string AgencyAssignedNibrs { get; set; } = "   ";
 
         [JsonIgnore]
@@ -75,6 +57,8 @@ namespace LibrsModels.Classes
             Padding = string.Concat(Enumerable.Repeat(" ", 68));
         }
 
+
+
         public void FixPaddings()
         {
             // If seqNum is not provided set it to "   "
@@ -86,21 +70,39 @@ namespace LibrsModels.Classes
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);
             MethodOfEntry = MethodOfEntry.PadR(1);
-            CriminalActivity1 = CriminalActivity1.PadR(1);
-            CriminalActivity2 = CriminalActivity2.PadR(1);
-            CriminalActivity3 = CriminalActivity3.PadR(1);
-            WeaponForce1 = WeaponForce1.PadR(3);
-            WeaponForce2 = WeaponForce2.PadR(3);
-            WeaponForce3 = WeaponForce3.PadR(3);
+            CriminalActivity.CriminalActivity1 = CriminalActivity.CriminalActivity1.PadR(1);
+            CriminalActivity.CriminalActivity2 = CriminalActivity.CriminalActivity2.PadR(1);
+            CriminalActivity.CriminalActivity3 = CriminalActivity.CriminalActivity3.PadR(1);
+            Weapons[0].WeaponForce = Weapons[0].WeaponForce.PadR(3);
+            Weapons[1].WeaponForce = Weapons[0].WeaponForce.PadR(3);
+            Weapons[2].WeaponForce = Weapons[0].WeaponForce.PadR(3);
             CargoTheft = CargoTheft.PadR(1);
-            StolenFirearm1 = StolenFirearm1.PadL(1);
-            StolenFirearm2 = StolenFirearm2.PadL(1);
-            StolenFirearm3 = StolenFirearm3.PadL(1);
-            DischargedFirearm1 = DischargedFirearm1.PadL(1);
-            DischargedFirearm2 = DischargedFirearm2.PadL(1);
-            DischargedFirearm3 = DischargedFirearm3.PadL(1);
+            // Weapons[0].StolenFirearm = Weapons[0].StolenFirearm.PadR(1);
+            // Weapons[1].StolenFirearm = Weapons[1].StolenFirearm.PadR(1);
+            // Weapons[2].StolenFirearm = Weapons[2].StolenFirearm.PadR(1);
+            // Weapons[0].DischargedFirearm = Weapons[0].DischargedFirearm.PadR(1);
+            // Weapons[1].DischargedFirearm = Weapons[1].DischargedFirearm.PadR(1);
+            // Weapons[2].DischargedFirearm = Weapons[2].DischargedFirearm.PadR(1);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);
         }
+    }
+    public class CriminalActivity
+    {
+        [JsonProperty("criminalActivity1")] public string CriminalActivity1 { get; set; } = " ";
+
+        [JsonProperty("criminalActivity2")] public string CriminalActivity2 { get; set; } = " ";
+
+        [JsonProperty("criminalActivity3")] public string CriminalActivity3 { get; set; } = " ";
+    }
+
+    public class Weapon
+    {
+        [JsonProperty("weaponForce")] public string WeaponForce { get; set; } = "   ";
+
+        [JsonProperty("stolenFirearm")] public bool? StolenFirearm { get; set; }
+
+        [JsonProperty("dischargedFirearm")] public bool? DischargedFirearm { get; set; }
+
     }
 }
