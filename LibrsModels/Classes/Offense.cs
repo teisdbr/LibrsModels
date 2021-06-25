@@ -19,6 +19,7 @@ namespace LibrsModels.Classes
         [JsonProperty("methodOfEntry")] public string MethodOfEntry { get; set; } = " ";
 
         [JsonProperty("criminalActivity")] public List<string> CriminalActivity { get; set; } = new List<string>(){" ", " ", " "};
+        
         [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; } = new List<Weapon>()
         {
             new Weapon() { WeaponForce = "   " },
@@ -73,19 +74,7 @@ namespace LibrsModels.Classes
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);
             MethodOfEntry = MethodOfEntry.PadR(1);
-            //CriminalActivity[0] = CriminalActivity[0].PadR(1) ?? "   ";
-            //CriminalActivity[1] = CriminalActivity[1].PadR(1) ?? "   ";
-            //CriminalActivity[2] = CriminalActivity[2].PadR(1) ?? "   ";
-            //Weapons[0].WeaponForce = Weapons[0].WeaponForce.PadR(3);
-            //Weapons[1].WeaponForce = Weapons[1].WeaponForce.PadR(3);
-            //Weapons[2].WeaponForce = Weapons[2].WeaponForce.PadR(3);
             CargoTheft = CargoTheft.PadR(1);
-            // Weapons[0].StolenFirearm = Weapons[0].StolenFirearm.PadR(1);
-            // Weapons[1].StolenFirearm = Weapons[1].StolenFirearm.PadR(1);
-            // Weapons[2].StolenFirearm = Weapons[2].StolenFirearm.PadR(1);
-            // Weapons[0].DischargedFirearm = Weapons[0].DischargedFirearm.PadR(1);
-            // Weapons[1].DischargedFirearm = Weapons[1].DischargedFirearm.PadR(1);
-            // Weapons[2].DischargedFirearm = Weapons[2].DischargedFirearm.PadR(1);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);
         }
