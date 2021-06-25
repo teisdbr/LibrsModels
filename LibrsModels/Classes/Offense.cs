@@ -69,9 +69,9 @@ namespace LibrsModels.Classes
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);
             MethodOfEntry = MethodOfEntry.PadR(1);
-            CriminalActivity[0] = CriminalActivity[0].PadR(1) ?? "   ";
-            CriminalActivity[1] = CriminalActivity[1].PadR(1) ?? "   ";
-            CriminalActivity[2] = CriminalActivity[2].PadR(1) ?? "   ";
+            //CriminalActivity[0] = CriminalActivity[0].PadR(1) ?? "   ";
+            //CriminalActivity[1] = CriminalActivity[1].PadR(1) ?? "   ";
+            //CriminalActivity[2] = CriminalActivity[2].PadR(1) ?? "   ";
             Weapons[0].WeaponForce = Weapons[0].WeaponForce.PadR(3) ?? "   ";
             Weapons[1].WeaponForce = Weapons[1].WeaponForce.PadR(3) ?? "   ";
             Weapons[2].WeaponForce = Weapons[2].WeaponForce.PadR(3) ?? "   ";
