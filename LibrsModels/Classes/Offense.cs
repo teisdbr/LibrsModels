@@ -69,12 +69,12 @@ namespace LibrsModels.Classes
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);
             MethodOfEntry = MethodOfEntry.PadR(1);
-            CriminalActivity[0] = CriminalActivity[0].PadR(1);
-            CriminalActivity[1] = CriminalActivity[1].PadR(1);
-            CriminalActivity[2] = CriminalActivity[2].PadR(1);
-            Weapons[0].WeaponForce = Weapons[0].WeaponForce.PadR(3);
-            Weapons[1].WeaponForce = Weapons[0].WeaponForce.PadR(3);
-            Weapons[2].WeaponForce = Weapons[0].WeaponForce.PadR(3);
+            CriminalActivity[0] = CriminalActivity[0].PadR(1) ?? "   ";
+            CriminalActivity[1] = CriminalActivity[1].PadR(1) ?? "   ";
+            CriminalActivity[2] = CriminalActivity[2].PadR(1) ?? "   ";
+            Weapons[0].WeaponForce = Weapons[0].WeaponForce.PadR(3) ?? "   ";
+            Weapons[1].WeaponForce = Weapons[1].WeaponForce.PadR(3) ?? "   ";
+            Weapons[2].WeaponForce = Weapons[2].WeaponForce.PadR(3) ?? "   ";
             CargoTheft = CargoTheft.PadR(1);
             // Weapons[0].StolenFirearm = Weapons[0].StolenFirearm.PadR(1);
             // Weapons[1].StolenFirearm = Weapons[1].StolenFirearm.PadR(1);
@@ -85,14 +85,6 @@ namespace LibrsModels.Classes
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);
         }
-    }
-    public class CriminalActivity
-    {
-        [JsonProperty("criminalActivity1")] public string CriminalActivity1 { get; set; } = " ";
-
-        [JsonProperty("criminalActivity2")] public string CriminalActivity2 { get; set; } = " ";
-
-        [JsonProperty("criminalActivity3")] public string CriminalActivity3 { get; set; } = " ";
     }
 
     public class Weapon
