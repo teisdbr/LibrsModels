@@ -18,9 +18,13 @@ namespace LibrsModels.Classes
 
         [JsonProperty("methodOfEntry")] public string MethodOfEntry { get; set; } = " ";
 
-        [JsonProperty("criminalActivity")] public List<string> CriminalActivity { get; set; }
-        
-        [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; }
+        [JsonProperty("criminalActivity")] public List<string> CriminalActivity { get; set; } = new List<string>(){" ", " ", " "};
+        [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; } = new List<Weapon>()
+        {
+            new Weapon() { WeaponForce = "   " },
+            new Weapon() { WeaponForce = "   " }, 
+            new Weapon() { WeaponForce = "   " }
+        };
         
         [JsonProperty("cargoTheft")] public string CargoTheft { get; set; } = " ";
 
@@ -72,9 +76,9 @@ namespace LibrsModels.Classes
             //CriminalActivity[0] = CriminalActivity[0].PadR(1) ?? "   ";
             //CriminalActivity[1] = CriminalActivity[1].PadR(1) ?? "   ";
             //CriminalActivity[2] = CriminalActivity[2].PadR(1) ?? "   ";
-            Weapons[0].WeaponForce = Weapons[0].WeaponForce.PadR(3) ?? "   ";
-            Weapons[1].WeaponForce = Weapons[1].WeaponForce.PadR(3) ?? "   ";
-            Weapons[2].WeaponForce = Weapons[2].WeaponForce.PadR(3) ?? "   ";
+            Weapons[0].WeaponForce = Weapons[0].WeaponForce.PadR(3);
+            Weapons[1].WeaponForce = Weapons[1].WeaponForce.PadR(3);
+            Weapons[2].WeaponForce = Weapons[2].WeaponForce.PadR(3);
             CargoTheft = CargoTheft.PadR(1);
             // Weapons[0].StolenFirearm = Weapons[0].StolenFirearm.PadR(1);
             // Weapons[1].StolenFirearm = Weapons[1].StolenFirearm.PadR(1);
