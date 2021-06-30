@@ -19,14 +19,9 @@ namespace LibrsModels.Classes
         [JsonProperty("methodOfEntry")] public string MethodOfEntry { get; set; } = " ";
 
         [JsonProperty("criminalActivity")] public List<string> CriminalActivity { get; set; } = new List<string>(){" ", " ", " "};
-        
-        [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; } = new List<Weapon>()
-        {
-            new Weapon() { WeaponForce = "   " },
-            new Weapon() { WeaponForce = "   " }, 
-            new Weapon() { WeaponForce = "   " }
-        };
-        
+
+        [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; } = new List<Weapon>();
+
         [JsonProperty("cargoTheft")] public string CargoTheft { get; set; } = " ";
 
         [JsonProperty("agencyAssignedNibrs")] public string AgencyAssignedNibrs { get; set; } = "   ";
@@ -60,9 +55,7 @@ namespace LibrsModels.Classes
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 16));
             Padding = string.Concat(Enumerable.Repeat(" ", 68));
         }
-
-
-
+        
         public void FixPaddings()
         {
             // If seqNum is not provided set it to "   "
@@ -83,6 +76,8 @@ namespace LibrsModels.Classes
     public class Weapon
     {
         [JsonProperty("weaponForce")] public string WeaponForce { get; set; } = "   ";
+        
+        [JsonProperty("automatic")] public bool? AutomaticFirearm { get; set; }
 
         [JsonProperty("stolenFirearm")] public bool? StolenFirearm { get; set; }
 
