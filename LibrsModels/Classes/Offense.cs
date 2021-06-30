@@ -22,7 +22,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; } = new List<Weapon>();
 
-        [JsonProperty("cargoTheft")] public string CargoTheft { get; set; } = " ";
+        [JsonProperty("cargoTheft")] public bool? CargoTheft { get; set; }
 
         [JsonProperty("agencyAssignedNibrs")] public string AgencyAssignedNibrs { get; set; } = "   ";
 
@@ -67,7 +67,6 @@ namespace LibrsModels.Classes
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);
             MethodOfEntry = MethodOfEntry.PadR(1);
-            CargoTheft = CargoTheft.PadR(1);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);
         }
