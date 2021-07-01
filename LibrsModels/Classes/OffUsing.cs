@@ -9,7 +9,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("offenderSeqNum")] public string OffenderSeqNum { get; set; } = "   ";
 
-        [JsonProperty("offUsingGamingMot")] public List<string> OffUsingGamingMot { get; set; }
+        [JsonProperty("offUsingGaming")] public List<string> OffUsingGaming { get; set; }
         
         public OffUsing()
         {
