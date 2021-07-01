@@ -48,21 +48,15 @@ namespace LibrsModels.Classes
 
         [JsonProperty("residentStatus")] public string ResidentStatus { get; set; } = " ";
 
-        [JsonProperty("aggravatedAssault1")] public string AggravatedAssault1 { get; set; } = "  ";
-
-        [JsonProperty("aggravatedAssault2")] public string AggravatedAssault2 { get; set; } = "  ";
-
-        [JsonProperty("aggravatedAssault3")] public string AggravatedAssault3 { get; set; } = "  ";
+        [JsonProperty("aggravatedAssault")] public List<string> AggravatedAssault { get; set; }
 
         [JsonProperty("additionalHomicide")] public string AdditionalHomicide { get; set; } = " ";
 
         [JsonProperty("precipitatingOffense")] public string PrecipitatingOffense { get; set; } = "   ";
+        
+        [JsonProperty("officerActivityCircumstance")] public string OfficerActivityCircumstance { get; set; } = "  ";
 
-        [JsonProperty("officerActivityCircumstance")]
-        public string OfficerActivityCircumstance { get; set; } = "  ";
-
-        [JsonProperty("officerAssignmentType")]
-        public string OfficerAssignmentType { get; set; } = " ";
+        [JsonProperty("officerAssignmentType")] public string OfficerAssignmentType { get; set; } = " ";
 
         [JsonProperty("officerOri")] public string OfficerOri { get; set; } = "         ";
         
@@ -81,9 +75,6 @@ namespace LibrsModels.Classes
             Ethnicity = Ethnicity.PadR(1);
             Gender = Gender.PadR(3);
             ResidentStatus = ResidentStatus.PadR(1);
-            AggravatedAssault1 = AggravatedAssault1.PadL(2,'0');
-            AggravatedAssault2 = AggravatedAssault2.PadL(2,'0');
-            AggravatedAssault3 = AggravatedAssault3.PadL(2,'0');
             AdditionalHomicide = AdditionalHomicide.PadR(1);
             OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2, '0');
             OfficerAssignmentType = OfficerAssignmentType.PadR(1);
