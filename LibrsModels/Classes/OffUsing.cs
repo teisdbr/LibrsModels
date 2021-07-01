@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 
@@ -8,7 +9,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("offenderSeqNum")] public string OffenderSeqNum { get; set; } = "   ";
 
-        [JsonProperty("offUsingGamingMot")] public string OffUsingGamingMot { get; set; } = "     ";
+        [JsonProperty("offUsingGamingMot")] public List<string> OffUsingGamingMot { get; set; }
         
         public OffUsing()
         {
@@ -20,7 +21,6 @@ namespace LibrsModels.Classes
         public void FixPaddings()
         {
             OffenderSeqNum = OffenderSeqNum.PadL(3, '0');;
-            OffUsingGamingMot = OffUsingGamingMot.PadR(4);
         }
     }
 }
