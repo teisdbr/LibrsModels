@@ -48,7 +48,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("residentStatus")] public string ResidentStatus { get; set; } = " ";
 
-        [JsonProperty("aggravatedAssault")] public List<string> AggravatedAssault { get; set; }
+        [JsonProperty("aggravatedAssault")] public List<string> AggravatedAssault { get; set; } = new List<string>{"  ", "  ", "  "};
 
         [JsonProperty("additionalHomicide")] public string AdditionalHomicide { get; set; } = " ";
 
