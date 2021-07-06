@@ -5,6 +5,8 @@ namespace LibrsModels.Classes
 {
     public interface ILibrsIncident
     {
+        string ActionType { get; }
+        string IncidentNumber { get; }
         Admin Admin { get; }
         List<Offense> Offense { get; }
         PropertySeg PropertySeg { get; }
@@ -18,8 +20,7 @@ namespace LibrsModels.Classes
         List<Arrestee> Arrestee { get; }
         List<ArrArm> ArrArm { get; }
         List<ArrStatute> ArrStatute { get; }
-        string ActionType { get; }
-        string IncidentNumber { get; }
+
         
         /// <summary>
         /// List of errors as returned by the validation server
