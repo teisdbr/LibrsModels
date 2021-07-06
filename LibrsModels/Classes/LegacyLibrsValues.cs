@@ -4,27 +4,27 @@ namespace LibrsModels.Classes
     public class LegacyLibrsValues
     {
         [JsonProperty("entireLineSegment")]
-        public string EntireLineSegment {internal get; set; }
-        
+        public string EntireLineSegment { get; set; }
+
         [JsonProperty("segmentDescriptor")]
-        public string SegmentDescriptor {internal get; set; }
-        
+        public string SegmentDescriptor { get; set; }
+
         [JsonProperty("actionType")]
-        public string ActionType { internal get; set; }
-        
+        public string ActionType { get; set; }
+
         [JsonProperty("oriNumber")]
-        public string ORINumber {internal get; set; }
-        
+        public string ORINumber { get; set; }
+
         [JsonProperty("incidentNumber")]
-        public string IncidentNumber {internal get; set; }
-        
+        public string IncidentNumber { get; set; }
+
         [JsonProperty("expansionBuffer")]
-        public string ExpansionBuffer {internal get; set; }
-        
+        public string ExpansionBuffer { get; set; }
+
         [JsonProperty("segmentEnd")]
-        public string SegmentEnd {internal get; set; } = "ZZ";
+        public string SegmentEnd = "ZZ";
 
         [JsonProperty("padding")]
-        public string Padding {internal get; set; }
+        public string Padding { get; set; }
     }
 }
