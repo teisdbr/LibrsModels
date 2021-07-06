@@ -10,6 +10,6 @@ namespace LibrsModels.Classes
         int ReportMonth { get; }
         bool ForSubmission { get; }
         List<T> IncidentList { get; }
-        ZeroReport ZeroReport { get; }
+        bool ZeroReport { get; }
     }
 }

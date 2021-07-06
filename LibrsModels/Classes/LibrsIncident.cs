@@ -20,6 +20,7 @@ namespace LibrsModels.Classes
         List<Arrestee> Arrestee { get; }
         List<ArrArm> ArrArm { get; }
         List<ArrStatute> ArrStatute { get; }
+ 
 
         
         /// <summary>
@@ -35,6 +36,12 @@ namespace LibrsModels.Classes
 
     public class LibrsIncident : ILibrsIncident, IPaddingFixer
     {
+        [JsonProperty("actionType")]
+        public string ActionType { get; set; }
+        
+        [JsonProperty("incidentNumber")]
+        public string IncidentNumber { get; set; }
+        
         [JsonProperty("hasErrors")]
         public bool HasErrors { get; set; }
         
@@ -97,11 +104,8 @@ namespace LibrsModels.Classes
         [JsonProperty("propertyLossTypeFlags")]
         public object PropertyLossTypeFlags { get; set; }
         
-        [JsonProperty("actionType")]
-        public string ActionType { get; set; }
-        
-        [JsonProperty("incidentNumber")]
-        public string IncidentNumber { get; set; }
+        [JsonIgnore]
+        public ZeroReport ZeroReport { get; set; }
 
         [JsonIgnore]
         public bool InsertedtoDB { get; set; }
