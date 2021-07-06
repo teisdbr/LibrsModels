@@ -16,6 +16,12 @@ namespace LibrsModels.Classes
         [JsonProperty("reportYear")] public int ReportYear { get; set; }
 
         [JsonProperty("reportMonth")] public int ReportMonth { get; set; }
+        
+        [JsonProperty("agencyName")] public string AgencyName { get; set; }
+        
+        [JsonProperty("softwareId")] public string SoftwareID { get; set; }
+        
+        [JsonProperty("softwareVersion")] public string SoftwareVersion { get; set; }
 
         [JsonProperty("forSubmission")] public bool ForSubmission { get; set; }
 

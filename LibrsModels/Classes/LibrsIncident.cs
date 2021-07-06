@@ -103,9 +103,6 @@ namespace LibrsModels.Classes
         
         [JsonProperty("propertyLossTypeFlags")]
         public object PropertyLossTypeFlags { get; set; }
-        
-        [JsonIgnore]
-        public ZeroReport ZeroReport { get; set; }
 
         [JsonIgnore]
         public bool InsertedtoDB { get; set; }

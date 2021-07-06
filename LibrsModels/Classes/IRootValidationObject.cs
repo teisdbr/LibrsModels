@@ -8,6 +8,9 @@ namespace LibrsModels.Classes
         string Ori { get; }
         int ReportYear { get; }
         int ReportMonth { get; }
+        string AgencyName { get; }
+        string SoftwareID { get; }
+        string SoftwareVersion { get; }
         bool ForSubmission { get; }
         List<T> IncidentList { get; }
         bool ZeroReport { get; }
