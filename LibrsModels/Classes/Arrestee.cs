@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Newtonsoft.Json;
 using TeUtil.Extensions;
@@ -15,7 +16,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("arresteeName")] public string ArresteeName { get; set; } = "                    ";
 
-        [JsonProperty("arrestDate")] public string ArrestDate { get; set; } = "        ";
+        [JsonProperty("arrestDate")] public DateTime ArrestDate { get; set; }
 
         [JsonProperty("arrestType")] public string ArrestType { get; set; } = " ";
 
@@ -24,7 +25,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("age")] public string Age { get; set; } = "   ";
 
-        [JsonProperty("dob")] public string DOB { get; set; } = "        ";
+        [JsonProperty("dob")] public DateTime DOB { get; set; }
 
         [JsonProperty("sex")] public string Sex { get; set; } = " ";
         [JsonProperty("gender")] public string Gender { get; set; } = "   ";
@@ -52,13 +53,9 @@ namespace LibrsModels.Classes
             ArrestNumber = ArrestNumber.PadL(12);
             ArrTransactionNumber = ArrTransactionNumber.PadL(15);
             ArresteeName = ArresteeName.PadR(20);
-            //TODO: Change arrest date to datetime type and extract string in librs format 
-            ArrestDate = ArrestDate.PadL(8);
             ArrestType = ArrestType.PadR(1);
             MultipleArresteeIndicator = MultipleArresteeIndicator.PadR(1);
             Age = PadArresteeAge(Age);
-            //TODO: Change dob to datetime type and extract string in librs format 
-            DOB = DOB.PadL(8);
             Sex = Sex.PadR(1);
             Gender = Gender.PadR(3);
             Race = Race.PadR(1);

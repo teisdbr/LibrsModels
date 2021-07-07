@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -15,7 +16,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("propertyValue")] public string PropertyValue { get; set; } = "         ";
 
-        [JsonProperty("dateRecovered")] public string DateRecovered { get; set; } = "        ";
+        [JsonProperty("dateRecovered")] public DateTime DateRecovered { get; set; }
 
         [JsonProperty("suspectedDrugType")] public string SuspectedDrugType { get; set; } = "  ";
 
@@ -53,8 +54,6 @@ namespace LibrsModels.Classes
             PropertyLossType = PropertyLossType.PadL(1);
             PropertyDescription = PropertyDescription.PadL(2, '0');
             PropertyValue = PropertyValue.PadL(9,'0');
-            //TODO: Change date recovered to datetime type and extract string in librs format 
-            DateRecovered = DateRecovered.PadL(8);
             SuspectedDrugType = SuspectedDrugType.PadR(2);
             EstimatedDrugQty = EstimatedDrugQty.PadL(13);
             TypeDrugMeas = TypeDrugMeas.PadL(2);

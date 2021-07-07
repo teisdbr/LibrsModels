@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Newtonsoft.Json;
 
@@ -9,11 +10,11 @@ namespace LibrsModels.Classes
 
         [JsonProperty("stationID")] public string StationID { get; set; } = "      ";
 
-        [JsonProperty("incidentDate")] public string IncidentDate { get; set; } = "           ";
+        [JsonProperty("incidentDate")] public DateTime IncidentDate { get; set; }
 
         [JsonProperty("clearedExceptionally")] public string ClearedExceptionally { get; set; } = "N";
 
-        [JsonProperty("excpClearDate")] public string ExcpClearDate { get; set; } = "        ";
+        [JsonProperty("excpClearDate")] public DateTime? ExcpClearDate { get; set; }
 
         [JsonIgnore] public bool HasGroupAOffense { get; set; }
         
@@ -28,11 +29,7 @@ namespace LibrsModels.Classes
         {
             Location = Location.PadR(12);
             StationID = StationID.PadR(6);
-            //TODO: Change incident date to datetime type and extract string in librs format 
-            IncidentDate = IncidentDate.PadR(11);
             ClearedExceptionally = ClearedExceptionally.PadR(1);
-            //TODO: Change excp clear date to datetime type and extract string in librs format 
-            ExcpClearDate = ExcpClearDate.PadR(8);
         }
     }
 }

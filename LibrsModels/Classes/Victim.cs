@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -36,7 +37,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("age")] public string Age { get; set; } = "   ";
 
-        [JsonProperty("dob")] public string DOB { get; set; } = "        ";
+        [JsonProperty("dob")] public DateTime DOB { get; set; }
 
         [JsonProperty("sex")] public string Sex { get; set; } = " ";
 

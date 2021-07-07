@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -12,7 +13,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("age")] public string Age { get; set; } = "   ";
 
-        [JsonProperty("dob")] public string Dob { get; set; } = "        ";
+        [JsonProperty("dob")] public DateTime Dob { get; set; }
 
         [JsonProperty("sex")] public string Sex { get; set; } = " ";
 
@@ -35,8 +36,6 @@ namespace LibrsModels.Classes
         {
             OffenderSeqNum = OffenderSeqNum.PadL(3, '0');;
             Age = PadOffenderAge(Age);
-            //TODO: Change dob to datetime type and extract string in librs format 
-            Dob = Dob.PadL(8);
             Sex = Sex.PadR(1);
             Gender = Gender.PadR(3);
             Race = Race.PadR(1);
