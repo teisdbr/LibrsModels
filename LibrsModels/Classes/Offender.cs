@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using TeUtil.Extensions;
@@ -22,6 +23,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("ethnicity")] public string Ethnicity { get; set; } = " ";
         
+        [JsonProperty("usingGaming")] public List<string> UsingGaming { get; set; }
         public Offender()
         {
             SegmentDescriptor = "40";
