@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace LibrsModels.Classes
 {
-    public class RootValidationObject: IPaddingFixer, IRootValidationObject<LibrsIncident>
+    public class RootValidationObject : IPaddingFixer, IRootValidationObject<LibrsIncident>
     {
         [JsonProperty("spec")] public string Spec { get; set; }
 
@@ -16,11 +16,11 @@ namespace LibrsModels.Classes
         [JsonProperty("reportYear")] public int ReportYear { get; set; }
 
         [JsonProperty("reportMonth")] public int ReportMonth { get; set; }
-        
+
         [JsonProperty("agencyName")] public string AgencyName { get; set; }
-        
+
         [JsonProperty("softwareId")] public string SoftwareID { get; set; }
-        
+
         [JsonProperty("softwareVersion")] public string SoftwareVersion { get; set; }
 
         [JsonProperty("forSubmission")] public bool ForSubmission { get; set; }
@@ -32,10 +32,15 @@ namespace LibrsModels.Classes
         public void FixPaddings()
         {
             #region Fixing Paddings For RootObject
+
             Ori = Ori.PadLeft(1);
+
             #endregion
+
             #region Fix Padding For Children
+
             Recursive(this);
+
             #endregion
         }
 
@@ -86,10 +91,20 @@ namespace LibrsModels.Classes
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex + " at " + inc.Name);
-                    throw new Exception(ex.Message + " at " + inc.Name +  " stack trace:" + ex.StackTrace, ex.InnerException);
+                    throw new Exception(ex.Message + " at " + inc.Name + " stack trace:" + ex.StackTrace,
+                        ex.InnerException);
 
                 }
             }
+        }
+
+        public string DateWithHourBuilder(DateTime dateTime)
+        {
+            return dateTime.ToString("MMddyyyy HH");
+        }
+        public string DateBuilder(DateTime dateTime)
+        {
+            return dateTime.ToString("MMddyyyy");
         }
     }
 }
