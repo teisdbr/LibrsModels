@@ -97,14 +97,5 @@ namespace LibrsModels.Classes
                 }
             }
         }
-
-        public string DateWithHourBuilder(DateTime dateTime)
-        {
-            return dateTime.ToString("MMddyyyy HH");
-        }
-        public string DateBuilder(DateTime dateTime)
-        {
-            return dateTime.ToString("MMddyyyy");
-        }
     }
 }
