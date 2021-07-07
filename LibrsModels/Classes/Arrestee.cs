@@ -25,7 +25,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("age")] public string Age { get; set; } = "   ";
 
-        [JsonProperty("dob")] public DateTime DOB { get; set; }
+        [JsonProperty("dob")] public DateTime? DOB { get; set; }
 
         [JsonProperty("sex")] public string Sex { get; set; } = " ";
         [JsonProperty("gender")] public string Gender { get; set; } = "   ";
