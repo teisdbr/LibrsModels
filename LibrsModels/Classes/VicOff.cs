@@ -8,10 +8,10 @@ namespace LibrsModels.Classes
 
         [JsonProperty("victimSeqNum")] public string VictimSeqNum { get; set; }
 
-        [JsonProperty("offenderNumberRelated")]
+        [JsonProperty("offenderNumber")]
         public string OffenderNumberRelated { get; set; } = "   ";
 
-        [JsonProperty("victimOffenderRelation")]
+        [JsonProperty("relationship")]
         public string VictimOffenderRelation { get; set; } = "  ";
         
         public VicOff()
