@@ -6,7 +6,7 @@ namespace LibrsModels.Classes
     public class VicOff : LegacyLibrsValues, IPaddingFixer
     {
 
-        [JsonProperty("victimSeqNum")] public string VictimSeqNum { get; set; } = "   ";
+        //[JsonProperty("victimSeqNum")] public string VictimSeqNum { get; set; } = "   ";
 
         [JsonProperty("offenderNumberRelated")]
         public string OffenderNumberRelated { get; set; } = "   ";
@@ -23,7 +23,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            VictimSeqNum = VictimSeqNum.PadL(3, '0');;
+            //VictimSeqNum = VictimSeqNum.PadL(3, '0');;
             OffenderNumberRelated = OffenderNumberRelated.PadL(3, '0');;
             VictimOffenderRelation = VictimOffenderRelation.PadR(2);
         }

@@ -74,17 +74,21 @@ namespace LibrsModels.Classes
         [JsonProperty("offender")]
         public List<Offender> Offender { get; set; }
         
-        [JsonProperty("offUsing")]
-        public List<OffUsing> OffUsing { get; set; }
+        // This is no longer in use in LIBRS, but I've left it here in case
+        // it's helpful to someone later down the line.
+        // [JsonProperty("offUsing")]
+        // public List<OffUsing> OffUsing { get; set; }
         
         [JsonProperty("victim")]
         public List<Victim> Victim { get; set; }
         
-        [JsonProperty("vicInjury")]
-        public List<VicInjury> VicInjury { get; set; }
+        // This is also no longer used in the JSON Model for LIBRS, but if it's
+        // valuable to someone down the line, have at.
+        // [JsonProperty("vicInjury")]
+        // public List<VicInjury> VicInjury { get; set; }
         
-        [JsonProperty("vicOff")]
-        public List<VicOff> VicOff { get; set; }
+        //[JsonProperty("vicOff")]
+        //public List<VicOff> VicOff { get; set; }
         
         [JsonProperty("arrestee")]
         public List<Arrestee> Arrestee { get; set; }

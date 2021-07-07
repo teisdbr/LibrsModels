@@ -59,10 +59,14 @@ namespace LibrsModels.Classes
         [JsonProperty("officerAssignmentType")] public string OfficerAssignmentType { get; set; } = " ";
 
         [JsonProperty("officerOri")] public string OfficerOri { get; set; } = "         ";
+
+        [JsonProperty("injuryType")] public string InjuryType { get; set; } = " ";
+        
+        [JsonProperty("relatedOffenders")] public List<VicOff> RelatedOffenders { get; set; }
         
         public Victim()
         {
-            SegmentDescriptor = "52";
+            SegmentDescriptor = "50";
             ExpansionBuffer = string.Concat(Enumerable.Repeat(" ", 6));
             Padding = string.Concat(Enumerable.Repeat(" ", 81));
         }
