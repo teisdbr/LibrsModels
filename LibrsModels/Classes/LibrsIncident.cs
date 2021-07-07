@@ -13,10 +13,10 @@ namespace LibrsModels.Classes
         List<PropDesc> PropDesc { get; }
         List<PropertyOffense> PropertyOffense { get; }
         List<Offender> Offender { get; }
-        List<OffUsing> OffUsing { get; }
+        //List<OffUsing> OffUsing { get; }
         List<Victim> Victim { get; }
-        List<VicInjury> VicInjury { get; }
-        List<VicOff> VicOff { get; }
+        // List<VicInjury> VicInjury { get; }
+        // List<VicOff> VicOff { get; }
         List<Arrestee> Arrestee { get; }
         List<ArrArm> ArrArm { get; }
         List<ArrStatute> ArrStatute { get; }
