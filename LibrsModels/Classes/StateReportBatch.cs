@@ -37,6 +37,11 @@ namespace LibrsModels.Classes
         int IRootValidationObject<ILibrsIncident>.ReportYear => ReportingDate.Year;
         [JsonProperty("reportMonth")]
         int IRootValidationObject<ILibrsIncident>.ReportMonth => ReportingDate.Month;
+
+        public string AgencyName { get; }
+        public string SoftwareID { get; }
+        public string SoftwareVersion { get; }
+
         [JsonProperty("forSubmission")]
         bool IRootValidationObject<ILibrsIncident>.ForSubmission => false; // False for now
         // api/jsonValidator?validateOnly=true
