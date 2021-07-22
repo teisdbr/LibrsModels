@@ -13,6 +13,6 @@ namespace LibrsModels.Classes
         string SoftwareVersion { get; }
         bool ForSubmission { get; }
         List<T> IncidentList { get; }
-        bool ZeroReport { get; }
+        ZeroReport ZeroReport { get; }
     }
 }
