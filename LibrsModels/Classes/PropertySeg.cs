@@ -5,7 +5,6 @@ namespace LibrsModels.Classes
 {
     public class PropertySeg: LegacyLibrsValues, IPaddingFixer
     {
-
         [JsonProperty("numOfStolenVehicles")] public string NumOfStolenVehicles { get; set; } = "  ";
 
         [JsonProperty("numOfRecoveredVehicles")]
