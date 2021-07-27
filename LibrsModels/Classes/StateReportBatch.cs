@@ -29,27 +29,27 @@ namespace LibrsModels.Classes
         #region IRootValidationObject Implementation
         
         [JsonProperty("spec")]
-        string IRootValidationObject<ILibrsIncident>.Spec => StateReportingSpec;
+        string IRootValidationObject<ILibrsIncident>.Spec { get; set; }
         
         [JsonProperty("ori")]
-        string IRootValidationObject<ILibrsIncident>.Ori => ReportingId;
+        string IRootValidationObject<ILibrsIncident>.Ori { get; set; }
         [JsonProperty("reportYear")]
-        int IRootValidationObject<ILibrsIncident>.ReportYear => ReportingDate.Year;
+        int IRootValidationObject<ILibrsIncident>.ReportYear { get; set; }
         [JsonProperty("reportMonth")]
-        int IRootValidationObject<ILibrsIncident>.ReportMonth => ReportingDate.Month;
+        int IRootValidationObject<ILibrsIncident>.ReportMonth { get; set; }
 
-        public string AgencyName { get; }
-        public string SoftwareID { get; }
-        public string SoftwareVersion { get; }
+        public string AgencyName { get; set; }
+        public string SoftwareID { get; set; }
+        public string SoftwareVersion { get; set; }
 
         [JsonProperty("forSubmission")]
-        bool IRootValidationObject<ILibrsIncident>.ForSubmission => false; // False for now
+        bool IRootValidationObject<ILibrsIncident>.ForSubmission { get; set; } // False for now
         // api/jsonValidator?validateOnly=true
         [JsonProperty("incidentList")]
-        List<ILibrsIncident> IRootValidationObject<ILibrsIncident>.IncidentList { get; }
+        List<ILibrsIncident> IRootValidationObject<ILibrsIncident>.IncidentList { get; set; }
 
         [JsonProperty("zeroReport")]
-        ZeroReport IRootValidationObject<ILibrsIncident>.ZeroReport => StateReports != null && StateReports.Any() ? null : new ZeroReport();
+        ZeroReport IRootValidationObject<ILibrsIncident>.ZeroReport { get; set; }
 
         #endregion
     }
