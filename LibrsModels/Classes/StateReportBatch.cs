@@ -49,7 +49,7 @@ namespace LibrsModels.Classes
         List<ILibrsIncident> IRootValidationObject<ILibrsIncident>.IncidentList { get; set; }
 
         [JsonProperty("zeroReport")]
-        ZeroReport IRootValidationObject<ILibrsIncident>.ZeroReport { get; set; }
+        bool IRootValidationObject<ILibrsIncident>.ZeroReport { get; set; }
 
         #endregion
     }
