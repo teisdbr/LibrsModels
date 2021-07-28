@@ -15,7 +15,7 @@ namespace LibrsModels.Extensions
         /// <param name="incidentDate">Incident Date or Reporting Date</param>
         /// <param name="isReportingDate">Indicates whether or not a reporting date was specified</param>
         /// <returns>Datetime string according to format of MMDDYYYYXHH</returns>
-        private static string ToIncidentDateString(this DateTime? incidentDate, bool isReportingDate = false)
+        public static string ToIncidentDateString(this DateTime? incidentDate, bool isReportingDate = false)
         {
             var dateTypeIndicator = isReportingDate == false ? " " : "R";
             // ReSharper disable once StringLiteralTypo
