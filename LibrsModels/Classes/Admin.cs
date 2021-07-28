@@ -10,14 +10,25 @@ namespace LibrsModels.Classes
 
         [JsonProperty("stationID")] public string StationID { get; set; } = "      ";
 
-        [JsonProperty("incidentDate")] public DateTime IncidentDate { get; set; }
+        /// <summary>
+        /// Stores the incident date or incident reported date as indicated by IsReportingDate property
+        /// </summary>
+        [JsonProperty("incidentDate")]
+        public DateTime? IncidentDate { get; set; }
+
+        /// <summary>
+        /// Indicates whether or not the incident date provided in this object is actually the reporting date.
+        /// The default value is false.
+        /// </summary>
+        [JsonProperty("isReportingDate")]
+        public bool IsReportingDate { get; set; }
 
         [JsonProperty("clearedExceptionally")] public string ClearedExceptionally { get; set; } = "N";
 
         [JsonProperty("excpClearDate")] public DateTime? ExcpClearDate { get; set; }
 
         [JsonIgnore] public bool HasGroupAOffense { get; set; }
-        
+
         public Admin()
         {
             SegmentDescriptor = "10";

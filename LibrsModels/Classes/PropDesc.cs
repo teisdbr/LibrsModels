@@ -16,7 +16,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("propertyValue")] public string PropertyValue { get; set; } = "         ";
 
-        [JsonProperty("dateRecovered")] public DateTime DateRecovered { get; set; }
+        [JsonProperty("dateRecovered")] public DateTime? DateRecovered { get; set; }
 
         [JsonProperty("suspectedDrugType")] public string SuspectedDrugType { get; set; } = "  ";
 

@@ -16,7 +16,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("arresteeName")] public string ArresteeName { get; set; } = "                    ";
 
-        [JsonProperty("arrestDate")] public DateTime ArrestDate { get; set; }
+        [JsonProperty("arrestDate")] public DateTime? ArrestDate { get; set; }
 
         [JsonProperty("arrestType")] public string ArrestType { get; set; } = " ";
 
