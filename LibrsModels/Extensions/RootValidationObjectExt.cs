@@ -2,7 +2,7 @@ using System;
 
 namespace LibrsModels.Extensions
 {
-    public static class RootValidationObject
+    public static class RootValidationObjectExt
     {
         /// <summary>
         /// Combines both the IncidentDate (DateTime) and the ReportingDate indicator (Bool) into a literal
