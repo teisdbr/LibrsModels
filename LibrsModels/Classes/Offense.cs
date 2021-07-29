@@ -18,7 +18,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("methodOfEntry")] public string MethodOfEntry { get; set; } = " ";
 
-        [JsonProperty("criminalActivity")] public List<string> CriminalActivity { get; set; } = new List<string>(){" ", " ", " "};
+        [JsonProperty("criminalActivity")] public List<string> CriminalActivity { get; set; } = new List<string>();
 
         [JsonProperty("weapons")] public List<Weapon> Weapons { get; set; } = new List<Weapon>();
 
@@ -66,6 +66,8 @@ namespace LibrsModels.Classes
             OffConnecttoVic = OffConnecttoVic.PadL(3, '0');
             LocationType = LocationType.PadR(2);
             Premises = Premises.PadR(2);
+            CriminalActivity.ForEach( val => val.PadR(1));
+            Weapons.ForEach(val => val.WeaponForce.PadR(3));
             MethodOfEntry = MethodOfEntry.PadR(1);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);

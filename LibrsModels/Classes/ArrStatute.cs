@@ -39,11 +39,11 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
-            ArrestConToOffense = ArrestConToOffense.PadL(15);
-            ArresteInchoate = ArresteInchoate.PadR(2);
-            AgencyAssignedNibrs = AgencyAssignedNibrs.PadL(3);
-            LrsNumber = LrsNumber.PadL(12);
+            ArrestSeqNum = ArrestSeqNum?.PadL(3, '0');;
+            ArrestConToOffense = ArrestConToOffense?.PadL(15);
+            ArresteInchoate = ArresteInchoate?.PadR(2);
+            AgencyAssignedNibrs = AgencyAssignedNibrs?.PadL(3);
+            LrsNumber = LrsNumber?.PadL(12);
         }
     }
 }

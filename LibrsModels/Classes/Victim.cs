@@ -49,7 +49,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("residentStatus")] public string ResidentStatus { get; set; } = " ";
 
-        [JsonProperty("aggravatedAssault")] public List<string> AggravatedAssault { get; set; } = new List<string>{"  ", "  ", "  "};
+        [JsonProperty("aggravatedAssault")] public List<string> AggravatedAssault { get; set; } = new List<string>();
 
         [JsonProperty("additionalHomicide")] public string AdditionalHomicide { get; set; } = " ";
 
@@ -81,6 +81,7 @@ namespace LibrsModels.Classes
             Gender = Gender.PadR(3);
             ResidentStatus = ResidentStatus.PadR(1);
             AdditionalHomicide = AdditionalHomicide.PadR(1);
+            AggravatedAssault.ForEach(val => val.PadR(2));
             OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2, '0');
             OfficerAssignmentType = OfficerAssignmentType.PadR(1);
             PrecipitatingOffense = PrecipitatingOffense.PadR(3);
